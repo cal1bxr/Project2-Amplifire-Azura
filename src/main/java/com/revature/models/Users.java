@@ -19,6 +19,9 @@ public class Users {
     @JoinTable(name="songLikes", joinColumns=@JoinColumn(name="username"),
             inverseJoinColumns=@JoinColumn(name="songName"))
     private Set<Songs> userSongs = new HashSet<Songs>();
+    
+    @ManyToOne
+    private Favorites favorites;
 
 
 }

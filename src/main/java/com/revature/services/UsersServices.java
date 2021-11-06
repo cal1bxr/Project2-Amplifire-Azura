@@ -17,6 +17,7 @@ public class UsersServices {
 
     @Autowired
     public UsersServices(UserDao userDao) {
+    	super();
         this.userDao = userDao;
     }
 
