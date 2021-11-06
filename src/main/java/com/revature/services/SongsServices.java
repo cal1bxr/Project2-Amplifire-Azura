@@ -15,6 +15,7 @@ public class SongsServices {
 
     @Autowired
     public SongsServices(SongsDao SongsDao) {
+    	super();
         this.songsDao = SongsDao;
     }
 
