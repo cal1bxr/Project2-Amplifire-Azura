@@ -20,7 +20,7 @@ public class UserController {
         this.userService = userService;
     }
 
-    @GetMapping("/{id}")
+    @GetMapping(value="/{id}")
     public Users oneUser(@PathVariable("id") int id){
         return userService.findById(id);
     }
@@ -30,7 +30,7 @@ public class UserController {
         return userService.findAll();
     }
 
-    @GetMapping("/{name}")
+    @GetMapping(value="/{name}")
     public List<Users> oneUser(@PathVariable("name") String username){
         return userService.findByUser(username);
     }
@@ -41,13 +41,13 @@ public class UserController {
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
-    @PutMapping
+    @PutMapping(value="/users")
     public ResponseEntity<Users> updateUser(@RequestBody Users user){
         userService.addOrUpdateUser(user);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
-    @DeleteMapping("/name")
+    @DeleteMapping(value="/name")
     public  ResponseEntity<Users> deleteUser(@PathVariable("name") String username){
         userService.deleteUser(username);
         return ResponseEntity.status(HttpStatus.OK).build();

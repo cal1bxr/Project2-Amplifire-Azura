@@ -17,10 +17,10 @@ class MatchifyApplicationTests {
 	void getSongs(){}
 
 	@Test
-	void getArtists(){}
+	void testGetArtists(){}
 
 	@Test
-	void getGenres(){}
+	void testGetGenres(){}
 
 	@Test
 	void login(){}
