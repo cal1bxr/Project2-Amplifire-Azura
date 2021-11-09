@@ -25,21 +25,25 @@ public class FavoritesService {
         return favoritesDao.findAll();
     }
 
-    public Favorites findById(int id) {
-        return favoritesDao.findById(id).get();
-    }
-
-    public List<Favorites> findByFavorites(String favoritesname){
-        Optional<List<Favorites>> oList = favoritesDao.findByFavoritesName(favoritesname);
-        return oList.orElseGet(ArrayList::new);
+    public Favorites findByEmail(String email) {
+        return favoritesDao.findByEmail(email).get();
     }
 
     public void addOrUpdateFavorites(Favorites favorites){
         favoritesDao.save(favorites);
     }
 
-    public void deleteFavorites(String favoritesname){
-        Favorites favorites = (Favorites) findByFavorites(favoritesname);
-        favoritesDao.delete(favorites);
+    public void deleteFavorites(String email){
+    	
+        List<Favorites> allFavorites = favoritesDao.findAll();
+        
+        for(Favorites i : allFavorites) {
+        	if(i.getEmail().equals(email)) {
+        		
+        		favoritesDao.delete(i);
+        	}
+        	
+        }
+        
     }
 }
