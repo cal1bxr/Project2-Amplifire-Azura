@@ -1,17 +1,16 @@
 package com.revature.models;
 
-import java.util.Objects;
-import java.util.Set;
-
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 
 @Entity
 public class Favorites {
 
-	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private int favID;
 	private String email;
 	private String favoriteEmail;
 	

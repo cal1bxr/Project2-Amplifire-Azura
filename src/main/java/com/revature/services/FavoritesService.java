@@ -5,11 +5,13 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.revature.models.Favorites;
 import com.revature.models.Favorites;
 import com.revature.repos.FavoritesDao;
 
+@Service
 public class FavoritesService {
 
     private FavoritesDao favoritesDao;
