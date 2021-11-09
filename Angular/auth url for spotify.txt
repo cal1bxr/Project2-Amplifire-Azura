@@ -1,1 +1,21 @@
-https://accounts.spotify.com/authorize?client_id=bd65c2a1c20245dda47c526d5fb90a2b&response_type=code&redirect_uri=http://localhost:4200&show_dialog=false
+Client_Id: bd65c2a1c20245dda47c526d5fb90a2b
+Client Secret: 8380aa9e99324cfc8477e329b444f3ff
+
+
+https://accounts.spotify.com/authorize?
+client_id=bd65c2a1c20245dda47c526d5fb90a2b
+&response_type=code
+&scope=user-read-private
+&redirect_uri=http://localhost:4200
+&show_dialog=false
+
+scopes
+user-read-private
+user-read-recently=played
+user-follow-modify
+user-follow-read
+user-top-read
+ugc-image-upload
+
+Base64 encoded
+YmQ2NWMyYTFjMjAyNDVkZGE0N2M1MjZkNWZiOTBhMmI6ODM4MGFhOWU5OTMyNGNmYzg0NzdlMzI5YjQ0NGYzZmY=
