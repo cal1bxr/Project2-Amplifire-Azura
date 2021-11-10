@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
   onClick(){
     let url = AUTHORIZE;
     url += '?client_id='+ clientId;
-    url += '&response_type=code';
+    url += '&response_type=token';
     url += '&redirect_uri='+ redirectUri;
     url += '&show_dialog=true';
     url += '&scope=' + SCOPES;
