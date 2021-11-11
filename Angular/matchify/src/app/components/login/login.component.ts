@@ -9,6 +9,7 @@ import { LoginService } from 'src/app/services/login.service';
 })
 export class LoginComponent implements OnInit {
   code: string | undefined;
+  text: string = "Click to Login"
   constructor(private loginService: LoginService) { }
 
   ngOnInit(): void {

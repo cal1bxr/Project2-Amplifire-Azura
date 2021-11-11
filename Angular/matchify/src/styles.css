@@ -9,7 +9,9 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #d3d3d3;
+  background-image: url(./assets/imgs/ff620854b85ca2824e8e3b6b3e5d079e.gif);
+  background-size: cover;
+  background-position: 50% 30%;
 }
 
 .container {
@@ -21,7 +23,7 @@ body {
   padding: 30px;
   border-radius: 5px;
   background-color: #e7e7e7;
-  box-shadow: 10px 5px 5px rgba(30, 215, 96, 0.4);
+  box-shadow: 10px 5px 5px rgba(30, 215, 96, 0.7);
 }
 .btn {
   display: inline-block;
@@ -41,6 +43,10 @@ body {
 }
 .btn:active {
   transform: scale(0.98);
+}
+
+.btn:hover {
+  background: rgba(0,0,0,0.5) 
 }
 
 .btn-block {
