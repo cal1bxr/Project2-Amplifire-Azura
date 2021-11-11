@@ -1,13 +1,16 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { throwError } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
 import {catchError} from 'rxjs/operators';
+
+const SERVERURL = "http://localhost:8081/user";
+const APIURL = "https://api.spotify.com/";
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-  private SERVER_URL = "http://localhost:8081/user";
+  
 
   constructor(private http: HttpClient) { }
 
@@ -23,7 +26,7 @@ export class UserService {
     return throwError(errorMessage);
   }
 
-  get(){
-    return this.http.get(this.SERVER_URL, {withCredentials: true}).pipe(catchError(this.handleError));
+  getCurrentUserInfo() {
+    return this.http.get(`${APIURL}/v1/me/`, {withCredentials: true}).subscribe();
   }
 }
