@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
     
   }
 
-  onClick(){
+  getAuth(){
     this.loginService.getAuthorization();
   }
 }

@@ -12,7 +12,8 @@ export class UserComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  // onClick(){
-  //   this.userService.getCurrentUserInfo();
-  // }
+ 
+  toggleInfo(){
+    console.log("I have been clicked");
+  }
 }

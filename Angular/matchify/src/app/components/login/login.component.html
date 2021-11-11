@@ -1,9 +1,9 @@
 <div class="container">
-<div>
-    <div id="login">
-        <h1>Log in to Spotify</h1>
-        <button class="btn"(click)="onClick()">Log in</button>
-    </div>
-    <div id="loggedIn"></div>
-</div>
+    <div>
+        <div id="login">
+         <h1>Log in to Spotify</h1>
+            <app-button (btnClick)="getAuth()">Log in</app-button>
+        </div>
+        <div id="loggedIn"></div>
+    </div>  
 </div>

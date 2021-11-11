@@ -9,6 +9,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: #d3d3d3;
 }
 
 .container {
@@ -19,6 +20,7 @@ body {
   border: 1px solid steelblue;
   padding: 30px;
   border-radius: 5px;
+  background-color: #e7e7e7;
   box-shadow: 10px 5px 5px rgba(30, 215, 96, 0.4);
 }
 .btn {
