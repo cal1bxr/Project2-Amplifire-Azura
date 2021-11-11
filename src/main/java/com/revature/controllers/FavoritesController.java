@@ -11,12 +11,15 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.revature.models.Favorites;
 import com.revature.services.FavoritesService;
 
 
-
+@RestController
+@RequestMapping(value="/favorites")
 public class FavoritesController {
 
     private FavoritesService favoriteService;
@@ -27,19 +30,14 @@ public class FavoritesController {
 		this.favoriteService = favoriteService;
 	}
 
-	@GetMapping("/{id}")
-    public Favorites oneFavorite(@PathVariable("id") int id){
-        return favoriteService.findById(id);
+	@GetMapping("/{email}")
+    public Favorites oneFavorite(@PathVariable("email") String email){
+        return favoriteService.findByEmail(email);
     }
 
     @GetMapping
     public List<Favorites> allFavorites() {
         return favoriteService.findAll();
-    }
-
-    @GetMapping("/{name}")
-    public List<Favorites> oneFavorite(@PathVariable("name") String favoritename){
-        return favoriteService.findByFavorites(favoritename);
     }
 
     @PostMapping
@@ -54,9 +52,9 @@ public class FavoritesController {
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
-    @DeleteMapping("/name")
-    public  ResponseEntity<Favorites> deleteFavorite(@PathVariable("name") String favoritename){
-        favoriteService.deleteFavorites(favoritename);
+    @DeleteMapping("/{email}")
+    public  ResponseEntity<Favorites> deleteFavorite(@PathVariable("email") String email){
+        favoriteService.deleteFavorites(email);
         return ResponseEntity.status(HttpStatus.OK).build();
     }
 

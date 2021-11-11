@@ -10,6 +10,7 @@ import com.revature.models.Users;
 
 public interface FavoritesDao extends JpaRepository<Favorites, Integer>{
 	
-	 public Optional<List<Favorites>> findByFavoritesName(String name);
+	 public Optional<Favorites> findByEmail(String email);
+	 public Optional<Favorites> findByFavoriteEmail(String favoriteEmail);
 
 }

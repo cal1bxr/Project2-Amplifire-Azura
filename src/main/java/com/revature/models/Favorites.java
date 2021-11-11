@@ -1,92 +1,106 @@
 package com.revature.models;
 
-import java.util.Objects;
-import java.util.Set;
-
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 
 @Entity
 public class Favorites {
 
 	@Id
-	private int userFavId;
-	private String favoritesName;
-	private String celebrities;
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private int favID;
+	private String email;
+	private String favoriteEmail;
 	
-	@ManyToOne
-	private Users user;
-
-	public Favorites(int userFavId, String favoritesName, String celebrities, Users user) {
-		this.userFavId = userFavId;
-		this.favoritesName = favoritesName;
-		this.celebrities = celebrities;
-		this.user = user;
-	}
-
-	public Favorites(String favoritesName, String celebrities, Users user) {
-		this.favoritesName = favoritesName;
-		this.celebrities = celebrities;
-		this.user = user;
-	}
-
+	
+	
 	public Favorites() {
+		super();
 	}
 
-	public int getUserFavId() {
-		return userFavId;
+
+
+	public Favorites(String favoriteEmail) {
+		super();
+		this.favoriteEmail = favoriteEmail;
 	}
 
-	public void setUserFavId(int userFavId) {
-		this.userFavId = userFavId;
+
+
+	public Favorites(String email, String favoriteEmail) {
+		super();
+		this.email = email;
+		this.favoriteEmail = favoriteEmail;
 	}
 
-	public String getFavoritesName() {
-		return favoritesName;
+
+
+	public String getEmail() {
+		return email;
 	}
 
-	public void setFavoritesName(String favoritesName) {
-		this.favoritesName = favoritesName;
+
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
-	public String getCelebrities() {
-		return celebrities;
+
+
+	public String getFavoriteEmail() {
+		return favoriteEmail;
 	}
 
-	public void setCelebrities(String celebrities) {
-		this.celebrities = celebrities;
+
+
+	public void setFavoriteEmail(String favoriteEmail) {
+		this.favoriteEmail = favoriteEmail;
 	}
 
-	public Users getUser() {
-		return user;
-	}
 
-	public void setUser(Users user) {
-		this.user = user;
-	}
-
-	@Override
-	public boolean equals(Object o) {
-		if (this == o) return true;
-		if (o == null || getClass() != o.getClass()) return false;
-		Favorites favorites = (Favorites) o;
-		return userFavId == favorites.userFavId && favoritesName.equals(favorites.favoritesName) && celebrities.equals(favorites.celebrities) && user.equals(favorites.user);
-	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(userFavId, favoritesName, celebrities, user);
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((email == null) ? 0 : email.hashCode());
+		result = prime * result + ((favoriteEmail == null) ? 0 : favoriteEmail.hashCode());
+		return result;
 	}
+
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Favorites other = (Favorites) obj;
+		if (email == null) {
+			if (other.email != null)
+				return false;
+		} else if (!email.equals(other.email))
+			return false;
+		if (favoriteEmail == null) {
+			if (other.favoriteEmail != null)
+				return false;
+		} else if (!favoriteEmail.equals(other.favoriteEmail))
+			return false;
+		return true;
+	}
+
+
 
 	@Override
 	public String toString() {
-		return "Favorites{" +
-				"userFavId=" + userFavId +
-				", favoritesName='" + favoritesName + '\'' +
-				", celebrities='" + celebrities + '\'' +
-				", user=" + user +
-				'}';
+		return "Favorites [email=" + email + ", favoriteEmail=" + favoriteEmail + "]";
 	}
+	
+	
+		
 }

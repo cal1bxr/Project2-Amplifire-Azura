@@ -25,21 +25,17 @@ public class UsersServices {
         return userDao.findAll();
     }
 
-    public Users findById(int id) {
-        return userDao.findById(id).get();
+    public Users findByEmail(String email) {
+        return userDao.findByEmail(email).get();
     }
 
-    public List<Users> findByUser(String username){
-        Optional<List<Users>> oList = userDao.findByUsername(username);
-        return oList.orElseGet(ArrayList::new);
-    }
 
     public void addOrUpdateUser(Users user){
         userDao.save(user);
     }
 
-    public void deleteUser(String username){
-        Users user = (Users) findByUser(username);
+    public void deleteUser(String email){
+        Users user = (Users) findByEmail(email);
         userDao.delete(user);
     }
 }
