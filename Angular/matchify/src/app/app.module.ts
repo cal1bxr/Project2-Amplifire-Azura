@@ -12,6 +12,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { SongComponent } from './components/song/song.component';
 
 import { LoginService } from './services/login.service';
+import { ArtistComponent } from './components/artist/artist.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { LoginService } from './services/login.service';
     UserComponent,
     ButtonComponent,
     NavbarComponent,
-    SongComponent, 
+    SongComponent,
+    ArtistComponent, 
   ],
   imports: [
     BrowserModule,
