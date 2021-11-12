@@ -1,11 +1,13 @@
 <div class="container">
     <h1>Your Top 5 Songs!</h1>
-    <ul class="no-bullets" *ngFor = "for title of title" [title] ="title"></ul>
-        <li> {{title[0]}} </li>
-        <li> {{title[1]}} </li>
-        <li> {{title[2]}} </li>
-        <li> {{title[3]}} </li>
-        <li> {{title[4]}} </li>
+
+    <app-button text="Go to Songs" (click)="toggleSongs(tracks)"></app-button>
+    <ul class="no-bullets" *ngFor = "for track of tracks"></ul>
+        <li> {{tracks}} </li>
+        <li> {{tracks[1]}} </li>
+        <li> {{tracks[2]}} </li>
+        <li> {{tracks[3]}} </li>
+        <li> {{tracks[4]}} </li>
 
 
 
