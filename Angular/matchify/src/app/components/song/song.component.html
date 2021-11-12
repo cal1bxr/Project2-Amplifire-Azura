@@ -1,11 +1,37 @@
 <div class="container">
     <h1>Your Top 5 Songs!</h1>
-    <ul class="no-bullets" *ngFor = "for title of title" [title] ="title"></ul>
-        <li> {{title[0]}} </li>
-        <li> {{title[1]}} </li>
-        <li> {{title[2]}} </li>
-        <li> {{title[3]}} </li>
-        <li> {{title[4]}} </li>
+    <ul class="no-bullets">
+        <ul>
+            <li> {{tracks.items[0].name}} </li>
+            <li> {{tracks.items[0].artists[0].name}} </li>
+            <li> <img src="{{tracks.items[0].album.images[2].url}}"/> </li>
+        </ul>
+        <ul>
+            <li> {{tracks.items[1].name}} </li>
+            <li> {{tracks.items[1].artists[0].name}} </li>
+            <li> <img src="{{tracks.items[1].album.images[2].url}}"/> </li>
+        </ul>
+        <ul>
+            <li> {{tracks.items[2].name}} </li>
+            <li> {{tracks.items[2].artists[0].name}} </li>
+            <li> <img src="{{tracks.items[2].album.images[2].url}}"/> </li>
+        </ul>
+        <ul>
+            <li> {{tracks.items[3].name}} </li>
+            <li> {{tracks.items[3].artists[0].name}} </li>
+            <li> <img src="{{tracks.items[3].album.images[2].url}}"/> </li>
+        </ul>
+        <ul>
+            <li> {{tracks.items[4].name}} </li>
+            <li> {{tracks.items[4].artists[0].name}} </li>
+            <li> <img src="{{tracks.items[4].album.images[2].url}}"/> </li>
+        </ul>
+
+        </ul>
+
+
+
+      
 
 
 
