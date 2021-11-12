@@ -22,9 +22,6 @@ img: null | undefined;
         this.title = response.body.display_name;
                           this.email = response.body.email;
                           this.img = response.body.images[0].url;
-      
-  //     {sessionStorage.setItem('username', JSON.stringify(response.body.display_name));
-  //                         sessionStorage.setItem('email', JSON.stringify(response.body.email));
    }
     ));
      
