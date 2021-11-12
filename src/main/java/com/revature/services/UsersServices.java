@@ -25,10 +25,9 @@ public class UsersServices {
         return userDao.findAll();
     }
 
-    public Users findByEmail(String email) {
+    public Users findByEmail(String email){
         return userDao.findByEmail(email).get();
     }
-
 
     public void addOrUpdateUser(Users user){
         userDao.save(user);
