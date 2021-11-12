@@ -18,10 +18,12 @@ public class Users {
     private String artist3;
     private String artist4;
     private String artist5;
-      
+    
+    
 	public Users() {
 		super();
 	}
+
 
 	public Users(String firstName, String lastName, String description, String artist1, String artist2, String artist3,
 			String artist4, String artist5) {
@@ -35,6 +37,7 @@ public class Users {
 		this.artist4 = artist4;
 		this.artist5 = artist5;
 	}
+
 
 	public Users(String email, String firstName, String lastName, String description, String artist1, String artist2,
 			String artist3, String artist4, String artist5) {
@@ -51,11 +54,9 @@ public class Users {
 	}
 
 
-
 	public String getEmail() {
 		return email;
 	}
-
 
 
 	public void setEmail(String email) {
@@ -63,11 +64,9 @@ public class Users {
 	}
 
 
-
 	public String getFirstName() {
 		return firstName;
 	}
-
 
 
 	public void setFirstName(String firstName) {
@@ -75,11 +74,9 @@ public class Users {
 	}
 
 
-
 	public String getLastName() {
 		return lastName;
 	}
-
 
 
 	public void setLastName(String lastName) {
@@ -87,11 +84,9 @@ public class Users {
 	}
 
 
-
 	public String getDescription() {
 		return description;
 	}
-
 
 
 	public void setDescription(String description) {
@@ -99,11 +94,9 @@ public class Users {
 	}
 
 
-
 	public String getArtist1() {
 		return artist1;
 	}
-
 
 
 	public void setArtist1(String artist1) {
@@ -111,11 +104,9 @@ public class Users {
 	}
 
 
-
 	public String getArtist2() {
 		return artist2;
 	}
-
 
 
 	public void setArtist2(String artist2) {
@@ -123,11 +114,9 @@ public class Users {
 	}
 
 
-
 	public String getArtist3() {
 		return artist3;
 	}
-
 
 
 	public void setArtist3(String artist3) {
@@ -135,11 +124,9 @@ public class Users {
 	}
 
 
-
 	public String getArtist4() {
 		return artist4;
 	}
-
 
 
 	public void setArtist4(String artist4) {
@@ -147,17 +134,14 @@ public class Users {
 	}
 
 
-
 	public String getArtist5() {
 		return artist5;
 	}
 
 
-
 	public void setArtist5(String artist5) {
 		this.artist5 = artist5;
 	}
-
 
 
 	@Override
@@ -175,7 +159,6 @@ public class Users {
 		result = prime * result + ((lastName == null) ? 0 : lastName.hashCode());
 		return result;
 	}
-
 
 
 	@Override
@@ -236,13 +219,13 @@ public class Users {
 	}
 
 
-
 	@Override
 	public String toString() {
 		return "Users [email=" + email + ", firstName=" + firstName + ", lastName=" + lastName + ", description="
 				+ description + ", artist1=" + artist1 + ", artist2=" + artist2 + ", artist3=" + artist3 + ", artist4="
 				+ artist4 + ", artist5=" + artist5 + "]";
 	}
+    
     
     
 

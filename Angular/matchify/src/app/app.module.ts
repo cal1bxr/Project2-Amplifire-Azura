@@ -13,6 +13,7 @@ import { SongComponent } from './components/song/song.component';
 
 import { LoginService } from './services/login.service';
 import { ArtistComponent } from './components/artist/artist.component';
+import { FavoritesComponent } from './components/favorites/favorites.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ArtistComponent } from './components/artist/artist.component';
     ButtonComponent,
     NavbarComponent,
     SongComponent,
-    ArtistComponent, 
+    ArtistComponent,
+    FavoritesComponent, 
   ],
   imports: [
     BrowserModule,

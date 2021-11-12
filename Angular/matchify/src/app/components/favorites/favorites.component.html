@@ -1,0 +1,15 @@
+<div class="container">
+    <h1>Your Favorite Users!</h1>
+
+    <app-button text="Go to Songs" (click)="toggleSongs(tracks)"></app-button>
+    <ul class="no-bullets" *ngFor = "for track of tracks"></ul>
+        <li> {{tracks}} </li>
+        <li> {{tracks[1]}} </li>
+        <li> {{tracks[2]}} </li>
+        <li> {{tracks[3]}} </li>
+        <li> {{tracks[4]}} </li>
+
+
+
+</div>
+
