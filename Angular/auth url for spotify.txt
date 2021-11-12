@@ -10,13 +10,19 @@ client_id=5f137a45a0d1403bb3e9a31625282aed
 &show_dialog=false
 
 scopes
-user-read-private
-user-read-recently=played
-user-follow-modify
 user-follow-read
 user-top-read
-ugc-image-upload
+user-read-private
 user-read-email
+user-read-recently-played
+
+
+ugc-image-upload
+
 
 Base64 encoded
 YmQ2NWMyYTFjMjAyNDVkZGE0N2M1MjZkNWZiOTBhMmI6ODM4MGFhOWU5OTMyNGNmYzg0NzdlMzI5YjQ0NGYzZmY=
+
+For Token
+AQAplkQ9aM-nuxkc8F7G-Getjfk5Al7egWizox9iHFg6oxOCKBGQk9B2YMHzTsL5Vp_7xCRGHa2Km2ovwJnUuDHt_j3WFWiFqsy56gq4bNIWTywZisEiCrFGOf24tGvsyQ3lgNAEqAFteYsCHFKIKw3ozwR3XTMkJsfuhEzeIcmzLts0u8pWGXYZaTbNi2I-W95LnzN39h5jyTdkM-CF3wgQ_ZIZ8pSYXfNcibV3oow9CV-qlduGxRDYSR4IGyUokrYBZcZotqwBkBUm1kknnIqqf5K8qfqrHfaSRb-7
+
