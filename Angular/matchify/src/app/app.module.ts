@@ -21,8 +21,7 @@ import { LoginService } from './services/login.service';
     UserComponent,
     ButtonComponent,
     NavbarComponent,
-    SongComponent
-    
+    SongComponent, 
   ],
   imports: [
     BrowserModule,

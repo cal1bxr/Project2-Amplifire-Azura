@@ -6,7 +6,7 @@ const SCOPES: string = "user-read-private%20user-read-recently-played%20user-fol
 const redirectUri = 'http://localhost:4200/home';
 const clientId = 'bd65c2a1c20245dda47c526d5fb90a2b';
 const clientSecret = '8380aa9e99324cfc8477e329b444f3ff';
-let code:string = '';
+let code:string = '';let ACCESSTOKEN ='';
 
 @Injectable({
   providedIn: 'root'
@@ -33,6 +33,7 @@ export class LoginService {
     let win = window.location.href;
     let winSplit = win.split('=', 2);
     code = winSplit[1];
+    let authCode = localStorage.setItem('code', JSON.stringify(code));
    
     const httpOptions: { headers: any; observe: any; } = {
       headers: new HttpHeaders()

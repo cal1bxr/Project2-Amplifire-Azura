@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { tap } from 'rxjs/operators';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
@@ -7,13 +8,25 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-  title: string = "User Info";
+// title = JSON.parse(sessionStorage.getItem('username')!);
+title: string = "";
+email: string = "";
+img: null | undefined;
+  
+  // users: User[] = [];
   constructor(private userService: UserService) { }
 
   ngOnInit(): void {
-  }
- 
-  toggleInfo(){
-    console.log("I have been clicked");
+    this.userService.getCurrentUserInfo().subscribe(
+      ((response: any)=> {console.log(response);
+        this.title = response.body.display_name;
+                          this.email = response.body.email;
+                          this.img = response.body.images[0].url;
+      
+  //     {sessionStorage.setItem('username', JSON.stringify(response.body.display_name));
+  //                         sessionStorage.setItem('email', JSON.stringify(response.body.email));
+   }
+    ));
+     
   }
 }
