@@ -32,13 +32,9 @@ imgUrl: any[] = [];
       this.title[4] = response.body.items[4].name;
       this.artist[4] = response.body.items[4].artists[0].name;
       this.imgUrl[4] = response.body.items[4].album.images[2].url;})
+      console.log(this.title);
   }
 
-  toggleSongs(){
-    
-      
-       
-    // ));
-     
+  toggleSongs(title: { [x: string]: any; }[]){
   }
 }
