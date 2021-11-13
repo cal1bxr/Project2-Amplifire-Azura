@@ -7,29 +7,26 @@
 <div>
     <h1>User Registration</h1>
     <div class="form-group">
-        <label for="name">First name</label>
-        <input type="text" class="form-control" id="firstName" required name="firstName" placeholder="Enter your first name">
-        <!-- [(ngModel)]="model.firstName" -->
+        <label for="firstName">First name</label>
+        <input type="text" class="form-control" #firstName="ngModel" id="firstName"  name="firstName" placeholder="Enter your first name" ngModel required>
     
     </div>
     <div class="form-group">
-        <label for="name">Last name</label>
-        <input type="text" class="form-control" id="lastName" required name="lastName" placeholder="Enter your last name">
-        <!-- [(ngModel)]="model.lastName"  -->
+        <label for="lastName">Last name</label>
+        <input type="text" class="form-control" #lastName="ngModel" id="lastName"  name="lastName" placeholder="Enter your last name"  ngModel required>
         
     </div>
     <div class="form-group">
-        <label for="name">Email</label>
-        <input type="email" class="form-control" id="email" required name="email" placeholder="Enter your email">
-        <!-- [(ngModel)]="model.email"  -->
+        <label for="email">Email</label>
+        <input type="email" class="form-control" #email="ngModel" id="email"  name="email" placeholder="Enter your email" ngModel required>
     </div>
     <div class="form-group">
         <label for="description">Description</label>
-        <textarea id="description" name="description" rows="4" cols="50" placeholder="Tell us something about yourself"></textarea>
-        <!-- [(ngModel)]="model.description" -->
+        <textarea id="description" #description="ngModel" name="description" rows="4" cols="50" placeholder="Tell us something about yourself"
+        ngModel></textarea>
     </div>
 </div>
-<app-button></app-button>
+<app-button text="Submit" (click)="login(firstName, lastName, email, description)"></app-button>
 
 
 
