@@ -68,7 +68,8 @@ export class LoginService {
     .set('access_token', accessToken);
 
     this.http.post('https://accounts.spotify.com/api/token', body, httpOptions).subscribe(
-      (response: any) => {console.log(response)}
+      (response: any) => { localStorage.setItem('access_token', JSON.stringify(response["body"].access_token));
+    }
     )
   }
 }
