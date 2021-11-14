@@ -24,9 +24,12 @@ spotifyId: string = "";
                           this.email = response.body.email;
                           this.img = response.body.images[0].url;
                           this.spotifyId = response.body.id;
-                          console.log(this.spotifyId);
    }
     ));
      
+  }
+
+  getRecommended(id: string){
+    
   }
 }

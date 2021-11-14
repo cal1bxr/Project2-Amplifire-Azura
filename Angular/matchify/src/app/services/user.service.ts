@@ -38,6 +38,11 @@ export class UserService {
 
   getCurrentUserInfo(): Observable<any>{
     return this.http.get<any>(`${APIUSERURI}`, this.httpOptions);
-    
+  }
+
+  getRecommendedArtist(): Observable<any>{
+    return this.http.get<any>(`${APIUSERURI}`)
   }
 }
+
+

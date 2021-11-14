@@ -15,7 +15,8 @@ body {
   ), url(./assets/imgs/ff620854b85ca2824e8e3b6b3e5d079e.gif);
   background-position: 50% 20%;
   background-size: 100%;
- 
+  margin: 0;
+  padding: 0; 
 }
 
 .container {
@@ -25,7 +26,6 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 500px;
   margin: 30px auto;
   overflow: auto;
   min-height: 300px;
@@ -95,3 +95,18 @@ body {
   flex: 2;
   height: 20px;
 }
+
+/*
+  Click and drag to attract
+  Right click to repulse
+  Mouse-wheel click to create a time dilation field
+  Use the Controls to decrease or increase
+  the particle count to tweak performance.
+*/
+
+
+  canvas {
+    display: block;
+    cursor: crosshair;
+  }
+
