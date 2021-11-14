@@ -1,14 +1,74 @@
+
 <div class="container">
+    
     <h1>Your Top 5 Songs!</h1>
+    <ul class="no-bullets" id="grid">
+        <ul>
+        <li id='card1'>
+            <div class="flip">
+                <div class="front">
+                    <h1 class="text-shadow"><img src="{{tracks.items[0].album.images[1].url}}"/></h1>
+                </div>
+                <div class="back">
+                <h2>{{tracks.items[0].name}} </h2>
+                    <p>{{tracks.items[0].artists[0].name}}</p>
+                </div>
+            </div>
+        </li>
+    </ul>
+        <ul>
+            <li id='card2'>
+            <div class="flip">
+                <div class="front">
+                    <h1 class="text-shadow"><img src="{{tracks.items[1].album.images[1].url}}"/></h1>
+                </div>
+                <div class="back">
+                <h2>{{tracks.items[1].name}} </h2>
+                    <p>{{tracks.items[1].artists[0].name}}</p>
+                </div>
+            </div>
+            </li>
+        </ul>
+        <ul>
+            <li id='card3'>
+                <div class="flip">
+                    <div class="front">
+                        <h1 class="text-shadow"><img src="{{tracks.items[2].album.images[1].url}}"/></h1>
+                    </div>
+                    <div class="back">
+                    <h2>{{tracks.items[2].name}} </h2>
+                        <p>{{tracks.items[2].artists[0].name}}</p>
+                    </div>
+                </div>
+                </li>
+        </ul>
+        <ul>
+            <li id='card4'>
+                <div class="flip">
+                    <div class="front">
+                        <h1 class="text-shadow"><img src="{{tracks.items[3].album.images[1].url}}"/></h1>
+                    </div>
+                    <div class="back">
+                    <h2>{{tracks.items[3].name}} </h2>
+                        <p>{{tracks.items[3].artists[0].name}}</p>
+                    </div>
+                </div>
+                </li>
+        </ul>
+        <ul>
+            <li id='card5'>
+                <div class="flip">
+                    <div class="front">
+                        <h1 class="text-shadow"><img src="{{tracks.items[4].album.images[1].url}}"/></h1>
+                    </div>
+                    <div class="back">
+                    <h2>{{tracks.items[4].name}} </h2>
+                        <p>{{tracks.items[4].artists[0].name}}</p>
+                    </div>
+                </div>
+                </li>
+        </ul>
 
-    <app-button text="Go to Songs" (click)="toggleSongs(tracks)"></app-button>
-    <ul class="no-bullets" *ngFor = "for track of tracks"></ul>
-        <li> {{tracks}} </li>
-        <li> {{tracks[1]}} </li>
-        <li> {{tracks[2]}} </li>
-        <li> {{tracks[3]}} </li>
-        <li> {{tracks[4]}} </li>
-
-
+        </ul>
 
 </div>

@@ -19,4 +19,5 @@ export class LoginComponent implements OnInit {
   getAuth(){
     this.loginService.getAuthorization();
   }
+
 }
