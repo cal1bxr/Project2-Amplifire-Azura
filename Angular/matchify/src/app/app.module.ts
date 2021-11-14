@@ -17,6 +17,8 @@ import { RegistrationComponent } from './components/registration/registration.co
 import { FormsModule } from '@angular/forms';
 import {User} from "./models/user"
 
+import { FavoritesComponent } from './components/favorites/favorites.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +29,11 @@ import {User} from "./models/user"
     NavbarComponent,
     SongComponent,
     ArtistComponent,
+
     RegistrationComponent, 
+
+    FavoritesComponent
+
   ],
   imports: [
     BrowserModule,
