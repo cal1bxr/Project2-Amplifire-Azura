@@ -8,7 +8,7 @@ import { SongService } from 'src/app/services/song.service';
   styleUrls: ['./song.component.css']
 })
 export class SongComponent implements OnInit {
-tracks: any = '';
+  tracks: any = '';
 
   constructor(private songService: SongService, private loginService: LoginService) { }
 

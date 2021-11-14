@@ -12,6 +12,7 @@ export class UserComponent implements OnInit {
 title: string = "";
 email: string = "";
 img: null | undefined;
+spotifyId: string = "";
   
   // users: User[] = [];
   constructor(private userService: UserService) { }
@@ -22,6 +23,8 @@ img: null | undefined;
         this.title = response.body.display_name;
                           this.email = response.body.email;
                           this.img = response.body.images[0].url;
+                          this.spotifyId = response.body.id;
+                          console.log(this.spotifyId);
    }
     ));
      

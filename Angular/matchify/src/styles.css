@@ -9,7 +9,10 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-image: url(./assets/imgs/ff620854b85ca2824e8e3b6b3e5d079e.gif);
+  background: linear-gradient(
+    rgba(0, 178, 195, 0.3), 
+    rgba(0, 178, 195, 0.3)
+  ), url(./assets/imgs/ff620854b85ca2824e8e3b6b3e5d079e.gif);
   background-position: 50% 20%;
   background-size: 100%;
  
