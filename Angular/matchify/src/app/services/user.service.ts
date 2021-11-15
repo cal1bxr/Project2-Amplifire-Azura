@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import {catchError} from 'rxjs/operators';
 import { LoginService } from './login.service';
+import { User } from '../models/user';
 
 const SERVERURL = "http://localhost:8081/user";
 const APIURL = "https://api.spotify.com/";
@@ -40,8 +41,21 @@ export class UserService {
   }
 
   getRecommendedArtist(): Observable<any>{
-    return this.http.get<any>(`${APIUSERURI}`)
+    return this.http.get<any>(`${APIUSERURI}`);
   }
+
+  getDBUser(email:string){
+    return this.http.get<User>('http://localhost:8081/data/users/'+email);
+    
+  }
+
+  getUserEmail(): Observable<any>{
+
+    
+    return this.http.get<any>(`${APIUSERURI}`, this.httpOptions);
+
+  }
+
 }
 
 

@@ -11,5 +11,6 @@ export class RegistrationService {
 
   postRegistration(user: User){
     this.http.post('http://localhost:8081/data/users', user);
+    console.log(user);
   }
 }
