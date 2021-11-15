@@ -18,7 +18,7 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'songs', component: SongComponent},
   {path: 'registration', component: RegistrationComponent},
-  {path: 'artists', component: ArtistComponent}
+  {path: 'artists', component: ArtistComponent},
   {path: 'favorites', component: FavoritesComponent}
 
 ];
