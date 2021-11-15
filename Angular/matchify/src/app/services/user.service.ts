@@ -52,7 +52,9 @@ export class UserService {
 
   getUserEmail(): Observable<any>{
 
+    
     return this.http.get<any>(`${APIUSERURI}`, this.httpOptions);
+
   }
 
 }

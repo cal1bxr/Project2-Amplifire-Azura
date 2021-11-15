@@ -25,19 +25,22 @@ export class RegistrationComponent implements OnInit {
   }
 
   login(fName: any, lName: any, des: any){
-    this.userService.getCurrentUserInfo().subscribe((response: any) => {this.useremail = response.email})
+    this.userService.getCurrentUserInfo().subscribe((response: any) => {this.useremail = response.body.email
     console.log(this.useremail);
     this.user = {
       firstName: fName.value,
       lastName: lName.value,
       email: this.useremail,
       description: des.value,
-      artist1: "iojoi",
+      artist1: undefined,
       artist2: undefined,
       artist3: undefined,
       artist4: undefined,
-      artist5: undefined
+      artist5: undefined,
+      artist6: undefined
     }
+    this.registrationService.postRegistration(this.user);
+  })
     console.log(this.user);
     this.registrationService.postRegistration(this.user);
   }

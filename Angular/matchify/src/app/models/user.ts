@@ -9,6 +9,5 @@ export class User {
     artist3: string | undefined;
     artist4 : string | undefined;
     artist5 : string | undefined;
-
-
+    artist6 : string | undefined;
 }
