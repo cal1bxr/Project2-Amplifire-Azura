@@ -20,7 +20,8 @@ useremail : string = '';
   constructor(private loginService: LoginService, private favService: FavoritesService, private userService: UserService) { }
 
   ngOnInit(): void {
-    this.loginService.getRefreshToken();
+
+    this.loginService.getRefreshToken(this.loginService.accessToken, this.loginService.refreshToken, this.loginService.code);
     this.getFavorites();
     this.setUserFavorites(this.allFavs);
   }

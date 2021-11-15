@@ -1,11 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { NgModel } from '@angular/forms';
-import { connectableObservableDescriptor } from 'rxjs/internal/observable/ConnectableObservable';
-import { last } from 'rxjs/operators';
 import { RegistrationService } from 'src/app/services/registration.service';
 import { UserService } from 'src/app/services/user.service';
 import {User} from '../../models/user';
-import { UserComponent } from '../user/user.component';
 
 @Component({
   selector: 'app-registration',
