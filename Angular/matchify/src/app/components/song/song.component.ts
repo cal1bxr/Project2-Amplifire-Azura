@@ -13,7 +13,8 @@ export class SongComponent implements OnInit {
   constructor(private songService: SongService, private loginService: LoginService) { }
 
   ngOnInit(): void {
-    this.loginService.getRefreshToken();
+
+    this.loginService.getRefreshToken(this.loginService.accessToken, this.loginService.refreshToken, this.loginService.code);
     this.songService.getSongs().subscribe((response) => {this.tracks=response;
       console.log(this.tracks);})
    

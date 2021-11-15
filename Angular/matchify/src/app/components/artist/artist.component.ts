@@ -14,7 +14,7 @@ export class ArtistComponent implements OnInit {
   constructor(private loginService: LoginService, private artistService: ArtistService) { }
 
   ngOnInit(): void {
-    this.loginService.getRefreshToken();
+    this.loginService.getRefreshToken(this.loginService.accessToken, this.loginService.refreshToken, this.loginService.code);
     this.artistService.getArtists().subscribe((response) => {this.artists=response;
       console.log(this.artists);
     })

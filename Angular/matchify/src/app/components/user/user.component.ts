@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { tap } from 'rxjs/operators';
+import { LoginService } from 'src/app/services/login.service';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
@@ -15,7 +15,7 @@ img: null | undefined;
 spotifyId: string = "";
   
   // users: User[] = [];
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, private loginService: LoginService) { }
 
   ngOnInit(): void {
     this.userService.getCurrentUserInfo().subscribe(
@@ -26,7 +26,8 @@ spotifyId: string = "";
                           this.spotifyId = response.body.id;
    }
     ));
-     
+
+    this.loginService.getRefreshToken(this.loginService.accessToken, this.loginService.refreshToken, this.loginService.code);     
   }
 
   getRecommended(id: string){

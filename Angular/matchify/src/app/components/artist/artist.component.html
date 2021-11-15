@@ -1,13 +1,76 @@
 <div class="container">
-    <h1>Your Top 5 Artists!</h1>
-
-    <ul class="no-bullets">
-        <ul>
-            <li> {{artists.items[0].name}} </li>
-            <li> {{artists.items[1].name}} </li>
-            <li> {{artists.items[2].name}} </li>
-            <li> {{artists.items[3].name}} </li>
-            <li> {{artists.items[4].name}} </li>
+            <ul class="no-bullets" id="grid">
+            <ul>
+            <li id='card1'>
+                <div class="flip">
+                    <div class="front">
+                        <h1 class="text-shadow"><img src="{{artists.items[0].images[1].url}}"/></h1>
+                    </div>
+                    <div class="back">
+                    <h2>{{artists.items[0].name}} </h2>
+                    </div>
+                </div>
+            </li>
         </ul>
-       
+            <ul>
+                <li id='card2'>
+                <div class="flip">
+                    <div class="front">
+                        <h1 class="text-shadow"><img src="{{artists.items[1].images[1].url}}"/></h1>
+                    </div>
+                    <div class="back">
+                    <h2>{{artists.items[1].name}} </h2>
+                    </div>
+                </div>
+                </li>
+            </ul>
+            <ul>
+                <li id='card3'>
+                    <div class="flip">
+                        <div class="front">
+                            <h1 class="text-shadow"><img src="{{artists.items[2].images[1].url}}"/></h1>
+                        </div>
+                        <div class="back">
+                        <h2>{{artists.items[2].name}} </h2>
+                        </div>
+                    </div>
+                    </li>
+            </ul>
+            <ul>
+                <li id='card4'>
+                    <div class="flip">
+                        <div class="front">
+                            <h1 class="text-shadow"><img src="{{artists.items[3].images[1].url}}"/></h1>
+                        </div>
+                        <div class="back">
+                        <h2>{{artists.items[3].name}} </h2>
+                        </div>
+                    </div>
+                    </li>
+            </ul>
+            <ul>
+                <li id='card5'>
+                    <div class="flip">
+                        <div class="front">
+                            <h1 class="text-shadow"><img src="{{artists.items[4].images[1].url}}"/></h1>
+                        </div>
+                        <div class="back">
+                        <h2>{{artists.items[4].name}} </h2>
+                        </div>
+                    </div>
+                    </li>
+            </ul>
+            <ul>
+                <li id='card5'>
+                    <div class="flip">
+                        <div class="front">
+                            <h1 class="text-shadow"><img src="{{artists.items[5].images[1].url}}"/></h1>
+                        </div>
+                        <div class="back">
+                        <h2>{{artists.items[5].name}} </h2>
+                        </div>
+                    </div>
+                    </li>
+            </ul>
         </ul>
+    </div>
