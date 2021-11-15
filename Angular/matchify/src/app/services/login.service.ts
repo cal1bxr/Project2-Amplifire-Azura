@@ -68,7 +68,3 @@ export class LoginService {
                       this.router.navigate(['login']);    
     })}
 }
-
-
-/* localStorage.setItem('access_token', JSON.stringify(response["body"].access_token));
-      localStorage.setItem('refresh_token', JSON.stringify(response["body"].refresh_token)*/

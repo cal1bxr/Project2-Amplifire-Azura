@@ -11,7 +11,7 @@ export class FavoritesComponent implements OnInit {
   constructor(private loginService: LoginService) { }
 
   ngOnInit(): void {
-    this.loginService.getRefreshToken();
+    this.loginService.getRefreshToken(this.loginService.accessToken, this.loginService.refreshToken, this.loginService.code);
   }
 
 }
