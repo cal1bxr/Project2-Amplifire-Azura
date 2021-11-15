@@ -12,17 +12,16 @@ const APIUSERURI = 'https://api.spotify.com/v1/me'
   providedIn: 'root'
 })
 export class UserService {
-  accessToken = JSON.parse(localStorage.getItem('access_token')!);
   
   httpOptions: { headers: any; observe: any; } = {
     headers: new HttpHeaders()
     .set('Content-Type', 'application/x-www-form-urlencoded')
-    .set('Authorization', 'Bearer ' + this.accessToken),
+    .set('Authorization', 'Bearer ' + this.loginService.accessToken),
     observe: 'response'
   };
   
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private loginService: LoginService) { }
 
   handleError(error: HttpErrorResponse){
     let errorMessage = "Something went wrong";
@@ -38,6 +37,11 @@ export class UserService {
 
   getCurrentUserInfo(): Observable<any>{
     return this.http.get<any>(`${APIUSERURI}`, this.httpOptions);
-    
+  }
+
+  getRecommendedArtist(): Observable<any>{
+    return this.http.get<any>(`${APIUSERURI}`)
   }
 }
+
+

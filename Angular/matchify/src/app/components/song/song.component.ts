@@ -8,12 +8,13 @@ import { SongService } from 'src/app/services/song.service';
   styleUrls: ['./song.component.css']
 })
 export class SongComponent implements OnInit {
-tracks: any = '';
+  tracks: any = '';
 
   constructor(private songService: SongService, private loginService: LoginService) { }
 
   ngOnInit(): void {
-    this.loginService.getRefreshToken();
+
+    this.loginService.getRefreshToken(this.loginService.accessToken, this.loginService.refreshToken, this.loginService.code);
     this.songService.getSongs().subscribe((response) => {this.tracks=response;
       console.log(this.tracks);})
    

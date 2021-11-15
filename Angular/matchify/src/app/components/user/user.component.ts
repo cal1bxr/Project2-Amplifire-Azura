@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { tap } from 'rxjs/operators';
+import { LoginService } from 'src/app/services/login.service';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
@@ -12,9 +12,10 @@ export class UserComponent implements OnInit {
 title: string = "";
 email: string = "";
 img: null | undefined;
+spotifyId: string = "";
   
   // users: User[] = [];
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, private loginService: LoginService) { }
 
   ngOnInit(): void {
     this.userService.getCurrentUserInfo().subscribe(
@@ -22,8 +23,14 @@ img: null | undefined;
         this.title = response.body.display_name;
                           this.email = response.body.email;
                           this.img = response.body.images[0].url;
+                          this.spotifyId = response.body.id;
    }
     ));
-     
+
+    this.loginService.getRefreshToken(this.loginService.accessToken, this.loginService.refreshToken, this.loginService.code);     
+  }
+
+  getRecommended(id: string){
+    
   }
 }
