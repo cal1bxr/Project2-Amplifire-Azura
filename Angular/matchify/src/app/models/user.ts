@@ -1,5 +1,4 @@
 
-
 export class User {
     
     email: string | undefined;
@@ -13,7 +12,8 @@ export class User {
     artist5 : string | undefined;
     artist6 : string | undefined;
 
-    constructor(email: string | undefined, 
+    constructor(
+        email: string | undefined, 
          firstName: string | undefined,
          lastName: string | undefined,
          description: string | undefined,
@@ -22,7 +22,8 @@ export class User {
          artist3: string | undefined,
          artist4: string | undefined,
          artist5: string | undefined,
-         artist6 : string | undefined){
+         artist6 : string | undefined
+         ){
 
         this.email = email;
         this.firstName = firstName;
