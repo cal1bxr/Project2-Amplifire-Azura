@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { LoginService } from './login.service';
 
 
 
@@ -9,15 +10,17 @@ import { Observable } from 'rxjs';
 })
 export class SongService {
   
-  private apiUrl="https://api.spotify.com/v1/me/top/tracks?time_range=medium_term&limit=5";
+  
+  private apiUrl="https://api.spotify.com/v1/me/top/tracks?time_range=medium_term&limit=6";
 
-  accessToken = JSON.parse(localStorage.getItem('access_token')!);
+  // accessToken = JSON.parse(localStorage.getItem('access_token')!);
 
   httpOptions = {headers: new HttpHeaders()
     .set('Content-Type', 'application/x-www-form-urlencoded')
-    .set('Authorization', 'Bearer ' + this.accessToken)
+    .set('Authorization', 'Bearer ' + this.loginService.accessToken)
   }
-  constructor( private http: HttpClient) { }
+  
+  constructor( private http: HttpClient, private loginService: LoginService) { }
 
 
   getSongs(): Observable<any>{
