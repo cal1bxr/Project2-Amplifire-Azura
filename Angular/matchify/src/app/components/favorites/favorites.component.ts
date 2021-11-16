@@ -15,6 +15,8 @@ export class FavoritesComponent implements OnInit {
 
 allFavs : Favorites[] = [];
 userFavs : Favorites[] = [];
+allUsers : User[] = [];
+favArtists: User[] = [];
 useremail : string = '';
 
   constructor(private loginService: LoginService, private favService: FavoritesService, private userService: UserService) { }
@@ -23,6 +25,8 @@ useremail : string = '';
     this.loginService.getRefreshToken();
     this.getFavorites();
     this.setUserFavorites(this.allFavs);
+    this.setFavArtists(this.userFavs);
+    //this.userService.getAllUsers().subscribe((response: any) => {this.allUsers[]= response.email; console.log(response)})
   }
 
  getFavorites() {
@@ -43,5 +47,31 @@ useremail : string = '';
       }
     }
   }
+
+setFavArtists(favs : Favorites[]){
+  for(let temp of favs){
+    this.userService.getDBUser(temp.favoriteEmail).subscribe(
+      (data:User)=>{
+        data = new User(data.email, data.firstName, data.lastName, data.description, data.artist1, data.artist2, data.artist3, data.artist4, data.artist5, data.artist6)
+        this.favArtists.push(data);
+      }
+        
+    )
+  }
+}
+
+// generateFavOptions(){
+//   for(let temp of allUsers){}
+//   let btn = document.createElement("checkbox");
+//   btn.innerHTML = "Submit";
+//   btn.type = "submit";
+//   btn.name = "formBtn";
+//   btn.onclick = function () {
+//     alert("Button is clicked");
+//   };
+//   document.body.appendChild(btn);
+// }
+
+//}
 
 }

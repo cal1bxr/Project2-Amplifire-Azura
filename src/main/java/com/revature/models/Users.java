@@ -18,6 +18,7 @@ public class Users {
     private String artist3;
     private String artist4;
     private String artist5;
+    private String artist6;
     
     
 	public Users() {
@@ -26,7 +27,7 @@ public class Users {
 
 
 	public Users(String firstName, String lastName, String description, String artist1, String artist2, String artist3,
-			String artist4, String artist5) {
+			String artist4, String artist5, String artist6) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -36,11 +37,12 @@ public class Users {
 		this.artist3 = artist3;
 		this.artist4 = artist4;
 		this.artist5 = artist5;
+		this.artist6 = artist6;
 	}
 
 
 	public Users(String email, String firstName, String lastName, String description, String artist1, String artist2,
-			String artist3, String artist4, String artist5) {
+			String artist3, String artist4, String artist5, String artist6) {
 		super();
 		this.email = email;
 		this.firstName = firstName;
@@ -51,6 +53,7 @@ public class Users {
 		this.artist3 = artist3;
 		this.artist4 = artist4;
 		this.artist5 = artist5;
+		this.artist6 = artist6;
 	}
 
 
@@ -144,6 +147,16 @@ public class Users {
 	}
 
 
+	public String getArtist6() {
+		return artist6;
+	}
+
+
+	public void setArtist6(String artist6) {
+		this.artist6 = artist6;
+	}
+
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -153,6 +166,7 @@ public class Users {
 		result = prime * result + ((artist3 == null) ? 0 : artist3.hashCode());
 		result = prime * result + ((artist4 == null) ? 0 : artist4.hashCode());
 		result = prime * result + ((artist5 == null) ? 0 : artist5.hashCode());
+		result = prime * result + ((artist6 == null) ? 0 : artist6.hashCode());
 		result = prime * result + ((description == null) ? 0 : description.hashCode());
 		result = prime * result + ((email == null) ? 0 : email.hashCode());
 		result = prime * result + ((firstName == null) ? 0 : firstName.hashCode());
@@ -195,6 +209,11 @@ public class Users {
 				return false;
 		} else if (!artist5.equals(other.artist5))
 			return false;
+		if (artist6 == null) {
+			if (other.artist6 != null)
+				return false;
+		} else if (!artist6.equals(other.artist6))
+			return false;
 		if (description == null) {
 			if (other.description != null)
 				return false;
@@ -223,11 +242,10 @@ public class Users {
 	public String toString() {
 		return "Users [email=" + email + ", firstName=" + firstName + ", lastName=" + lastName + ", description="
 				+ description + ", artist1=" + artist1 + ", artist2=" + artist2 + ", artist3=" + artist3 + ", artist4="
-				+ artist4 + ", artist5=" + artist5 + "]";
+				+ artist4 + ", artist5=" + artist5 + ", artist6=" + artist6 + "]";
 	}
-    
-    
-    
+	
+	
 
 
-}
+}	

@@ -29,9 +29,7 @@ import { FavoritesComponent } from './components/favorites/favorites.component';
     NavbarComponent,
     SongComponent,
     ArtistComponent,
-
     RegistrationComponent, 
-
     FavoritesComponent
 
   ],
@@ -41,7 +39,7 @@ import { FavoritesComponent } from './components/favorites/favorites.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [LoginService, User],
+  providers: [LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
