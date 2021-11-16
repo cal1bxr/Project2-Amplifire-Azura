@@ -10,7 +10,6 @@ export class RegistrationService {
   constructor(private http: HttpClient) { }
 
   postRegistration(user: User){
-    this.http.post('http://localhost:8081/data/users', user);
-    console.log(user);
+    this.http.post<any>('http://localhost:8081/data/users', user).subscribe((response)=>{console.log(response)});
   }
 }
