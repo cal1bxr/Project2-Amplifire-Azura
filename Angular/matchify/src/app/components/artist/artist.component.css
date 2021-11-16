@@ -5,15 +5,16 @@ img{
 }
 .grid{
     display: grid;
-	grid-template-areas: 
+	/* grid-template-areas: 
 	'card1 card1 card2 card2 card3 card3'
-	'.....  card4 card4 card5 card5 .....';
-    /* grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 1fr 1fr; */
+	'card4 card4 card5 card5 card6 card6'; */
+    grid-template-columns: 1fr 1fr 1fr;
+	/* repeat(6, 1fr); */
+    /* grid-template-rows: 1fr 1fr; */
     grid-gap:60px;
 }
 
-#card1 {
+/* #card1 {
     grid-area: card1;
 }
 
@@ -28,7 +29,7 @@ img{
 }
 #card5 {
     grid-area: card5;
-}
+} */
 
 .container {
     max-width: auto;
