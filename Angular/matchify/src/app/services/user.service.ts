@@ -45,7 +45,14 @@ export class UserService {
   }
 
   getDBUser(email:string){
+
     return this.http.get<User>('http://localhost:8081/data/users/'+email);
+    
+  }
+
+  getAllUsers(){
+
+    return this.http.get<User[]>('http://localhost:8081/data/users');
     
   }
 
