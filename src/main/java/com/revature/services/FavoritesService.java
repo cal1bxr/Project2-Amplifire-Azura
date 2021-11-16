@@ -35,12 +35,12 @@ public class FavoritesService {
         favoritesDao.save(favorites);
     }
 
-    public void deleteFavorites(String email){
+    public void deleteFavorites(int id){
     	
         List<Favorites> allFavorites = favoritesDao.findAll();
         
         for(Favorites i : allFavorites) {
-        	if(i.getEmail().equals(email)) {
+        	if(i.getFavID() == id) {
         		
         		favoritesDao.delete(i);
         	}

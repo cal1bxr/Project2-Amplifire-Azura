@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UrlSerializer } from '@angular/router';
 import { Favorites } from 'src/app/models/favorites';
+import { Favoriteswithid } from 'src/app/models/favoriteswithid';
 import { User } from 'src/app/models/user';
 import { FavoritesService } from 'src/app/services/favorites.service';
 import { LoginService } from 'src/app/services/login.service';
@@ -13,8 +14,8 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class FavoritesComponent implements OnInit {
 
-allFavs : Favorites[] = [];
-userFavs : Favorites[] = [];
+allFavs : Favoriteswithid[] = [];
+userFavs : Favoriteswithid[] = [];
 allUsers : User[] = [];
 favArtists: User[] = [];
 useremail : string = '';
@@ -29,18 +30,19 @@ useremail : string = '';
     this.setUserFavorites(this.allFavs);
     this.setFavArtists(this.userFavs);
     this.generateFavOptions(this.useremail);
+    this.generateDeleteOptions();
   }
 
  getFavorites() {
     this.favService.getAllFavorites().subscribe(
-      (response: Favorites[]) => {
+      (response: Favoriteswithid[]) => {
         this.allFavs = response;
       }
     )
     
   }
 
-  setUserFavorites(all: Favorites[]){
+  setUserFavorites(all: Favoriteswithid[]){
 
     this.userService.getCurrentUserInfo().subscribe((response: any) => {this.useremail = response.email; console.log(response)})
     for(let temp of all){
@@ -50,7 +52,7 @@ useremail : string = '';
     }
   }
 
-setFavArtists(favs : Favorites[]){
+setFavArtists(favs : Favoriteswithid[]){
   for(let temp of favs){
     this.userService.getDBUser(temp.favoriteEmail).subscribe(
       (data:User)=>{
@@ -73,7 +75,7 @@ generateFavOptions(useremail : string){
       }
       btn.onclick = () => {
         
-        alert("Button is clicked");
+        alert("Add Fav is clicked");
         let newFav = new Favorites(useremail, btn.value);
         this.favService.createFav(newFav);
         window.location.reload();
@@ -82,11 +84,37 @@ generateFavOptions(useremail : string){
       
       document.getElementById("exploreForm")!.appendChild(btn);
     }
-  
-  
-  
-  })
+   
+  })    
 
+}
+
+generateDeleteOptions(){
+  
+
+  for(let i of this.userFavs){
+
+    for(let temp of this.allUsers){
+
+      if(i.favoriteEmail === temp.email){
+        let btn = document.createElement("button");
+        if(temp.firstName != undefined){
+        btn.innerHTML = temp.firstName;
+        btn.value = i.id.toString();
+        }
+        btn.onclick = () => {
+          
+          alert("Delete is clicked");
+          var backtonumber :number = Number(btn.value);
+          this.favService.deleteFav(backtonumber);
+          window.location.reload();
+
+        }
+        
+        document.getElementById("deleteForm")!.appendChild(btn);
+      }
+    }
+  }
       
 
 }
