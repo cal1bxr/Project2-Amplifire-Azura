@@ -12,7 +12,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { SongComponent } from './components/song/song.component';
 
 import { LoginService } from './services/login.service';
-import { ArtistComponent } from './components/artist/artist.component';
+import { ArtistComponent } from ;
 import { RegistrationComponent } from './components/registration/registration.component';
 import { FormsModule } from '@angular/forms';
 import {User} from "./models/user"
@@ -30,10 +30,9 @@ import { GenreComponent } from './components/genre/genre.component';
     NavbarComponent,
     SongComponent,
     ArtistComponent,
-
     RegistrationComponent, 
-
-    FavoritesComponent, GenreComponent
+    FavoritesComponent, 
+    GenreComponent
 
   ],
   imports: [
@@ -42,7 +41,7 @@ import { GenreComponent } from './components/genre/genre.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [LoginService, User],
+  providers: [LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

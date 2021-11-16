@@ -12,4 +12,6 @@ export class RegistrationService {
   postRegistration(user: User){
     this.http.post<any>('http://localhost:8081/data/users', user).subscribe((response)=>{console.log(response)});
   }
+
+  
 }
