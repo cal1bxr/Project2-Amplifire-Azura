@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" id ="favs">
 
     <h1>Your Favorite Users!</h1>
 <br>
@@ -6,8 +6,8 @@
         <thead>
             <tr>
                 <th scope="col">Name</th>
-                <th scope="col">Top Artists</th>
-                <th scope="col">Top Genres</th>
+                <th scope="col">   Top Artists</th>
+                <th scope="col">   Top Genres</th>
             </tr>
         </thead>
          <tbody>
@@ -47,14 +47,26 @@
     </table>
 </div>
 <br>
-<div class="container">
+<div class="container" id = "explore">
     <h1>Explore other users!</h1>
-    <p> Check the users you'd like to add to your favorites list:</p>
+    <p> Click the users you'd like to add to your favorites list:</p>
     
-        <!-- <form *ngFor="let f of favArtists">
-            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-            <label for="vehicle1"> I have a bike</label><br>
-        </form> -->
+        <form id="exploreForm">
+            
+            
+        </form>
     
 </div>
 
+<div class="container" id = "delete">
+    <h1>Remove from your favorites!</h1>
+    <p> Click the users you'd like to delete your favorites list:</p>
+
+    <form id="deleteForm">
+            
+            
+    </form>
+
+    
+</div>
+<br>

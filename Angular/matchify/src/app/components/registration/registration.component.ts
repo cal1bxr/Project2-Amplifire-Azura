@@ -1,14 +1,12 @@
 import { Component, Input, OnInit } from '@angular/core';
-<<<<<<< HEAD
 import { NgModel } from '@angular/forms';
 import { connectableObservableDescriptor } from 'rxjs/internal/observable/ConnectableObservable';
 import { last } from 'rxjs/operators';
 import { LoginService } from 'src/app/services/login.service';
-=======
->>>>>>> e9848f97d7e016e7f167d1f9181df089b73cb6df
 import { RegistrationService } from 'src/app/services/registration.service';
 import { UserService } from 'src/app/services/user.service';
 import {User} from '../../models/user';
+import { UserComponent } from '../user/user.component';
 
 @Component({
   selector: 'app-registration',
@@ -24,11 +22,13 @@ export class RegistrationComponent implements OnInit {
   constructor(private registrationService: RegistrationService, private user: User, private userService: UserService, private loginService : LoginService) { }
 
   ngOnInit(): void {
-    this.loginService.getRefreshToken();
      this.userService.getCurrentUserInfo().subscribe((response: any) => {this.useremail = response.email})
   }
 
   login(fName: any, lName: any, des: any){
+
+    this.userService.getCurrentUserInfo().subscribe((response: any) => {this.useremail = response.body.email
+      console.log(this.useremail);
 
     this.user = {
       firstName: fName.value,
@@ -42,9 +42,6 @@ export class RegistrationComponent implements OnInit {
       artist5: undefined,
       artist6: undefined
     }
-
-    this.userService.getCurrentUserInfo().subscribe((response: any) => {this.useremail = response.body.email
-    console.log(this.useremail);
     
     this.registrationService.postRegistration(this.user);
   })

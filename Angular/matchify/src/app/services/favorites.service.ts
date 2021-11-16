@@ -12,4 +12,8 @@ export class FavoritesService {
   getAllFavorites(){
     return this.http.get<Favorites[]>('http://localhost:8081/data/favorites');
   }
+
+  createFav(newFav : Favorites){
+    return this.http.post('http://localhost:8081/data/favorites', newFav);
+  }
 }

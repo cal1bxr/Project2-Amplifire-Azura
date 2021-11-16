@@ -12,7 +12,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { SongComponent } from './components/song/song.component';
 
 import { LoginService } from './services/login.service';
-import { ArtistComponent } from './components/artist/artist.component';
+//import { ArtistComponent } from './components/artist/artist.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { FormsModule } from '@angular/forms';
 import {User} from "./models/user"
@@ -28,7 +28,7 @@ import { FavoritesComponent } from './components/favorites/favorites.component';
     ButtonComponent,
     NavbarComponent,
     SongComponent,
-    ArtistComponent,
+    //ArtistComponent,
     RegistrationComponent, 
     FavoritesComponent
 

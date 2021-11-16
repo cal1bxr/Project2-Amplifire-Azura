@@ -19,6 +19,7 @@ allUsers : User[] = [];
 favArtists: User[] = [];
 useremail : string = '';
 
+
   constructor(private loginService: LoginService, private favService: FavoritesService, private userService: UserService) { }
 
   ngOnInit(): void {
@@ -27,7 +28,7 @@ useremail : string = '';
     this.getFavorites();
     this.setUserFavorites(this.allFavs);
     this.setFavArtists(this.userFavs);
-    //this.userService.getAllUsers().subscribe((response: any) => {this.allUsers[]= response.email; console.log(response)})
+    this.generateFavOptions(this.useremail);
   }
 
  getFavorites() {
@@ -61,18 +62,34 @@ setFavArtists(favs : Favorites[]){
   }
 }
 
-// generateFavOptions(){
-//   for(let temp of allUsers){}
-//   let btn = document.createElement("checkbox");
-//   btn.innerHTML = "Submit";
-//   btn.type = "submit";
-//   btn.name = "formBtn";
-//   btn.onclick = function () {
-//     alert("Button is clicked");
-//   };
-//   document.body.appendChild(btn);
-// }
+generateFavOptions(useremail : string){
+  this.userService.getAllUsers().subscribe((response: any) => {this.allUsers = response; console.log(response);
+  
+    for(let temp of this.allUsers){
+      let btn = document.createElement("button");
+      if(temp != undefined && temp.email != undefined){
+      btn.innerHTML = temp.firstName+" "+temp.artist1+" "+temp.artist2+" "+temp.artist3+" "+temp.artist4+" "+temp.artist5+" "+temp.artist6;
+      btn.value = temp.email;
+      }
+      btn.onclick = () => {
+        
+        alert("Button is clicked");
+        let newFav = new Favorites(useremail, btn.value);
+        this.favService.createFav(newFav);
+        window.location.reload();
 
-//}
+      }
+      
+      document.getElementById("exploreForm")!.appendChild(btn);
+    }
+  
+  
+  
+  })
+
+      
+
+}
+
 
 }
