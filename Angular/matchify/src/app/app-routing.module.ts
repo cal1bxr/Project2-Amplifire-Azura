@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ArtistComponent } from './components/artist/artist.component';
 
 import { FavoritesComponent } from './components/favorites/favorites.component';
+import { GenreComponent } from './components/genre/genre.component';
 
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
@@ -19,7 +20,8 @@ const routes: Routes = [
   {path: 'songs', component: SongComponent},
   {path: 'registration', component: RegistrationComponent},
   {path: 'artists', component: ArtistComponent},
-  {path: 'favorites', component: FavoritesComponent}
+  {path: 'favorites', component: FavoritesComponent},
+  {path: 'genre', component: GenreComponent}
 
 ];
 

@@ -18,6 +18,7 @@ import { FormsModule } from '@angular/forms';
 import {User} from "./models/user"
 
 import { FavoritesComponent } from './components/favorites/favorites.component';
+import { GenreComponent } from './components/genre/genre.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import { FavoritesComponent } from './components/favorites/favorites.component';
 
     RegistrationComponent, 
 
-    FavoritesComponent
+    FavoritesComponent, GenreComponent
 
   ],
   imports: [
