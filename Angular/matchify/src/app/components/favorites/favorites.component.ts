@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UrlSerializer } from '@angular/router';
+import { Router, UrlSerializer } from '@angular/router';
 import { Favorites } from 'src/app/models/favorites';
 import { Favoriteswithid } from 'src/app/models/favoriteswithid';
 import { User } from 'src/app/models/user';
@@ -21,7 +21,7 @@ favArtists: User[] = [];
 useremail : string = '';
 
 
-  constructor(private loginService: LoginService, private favService: FavoritesService, private userService: UserService) { }
+  constructor(private loginService: LoginService, private favService: FavoritesService, private userService: UserService, private router: Router) { }
 
   ngOnInit(): void {
 
@@ -37,9 +37,11 @@ useremail : string = '';
     this.favService.getAllFavorites().subscribe(
       (response: Favoriteswithid[]) => {
         this.allFavs = response;
-      }
-    )
-    
+      },
+      (error: any) => {console.log("Http error: ", error);
+                  if(error.status == 503 || error.status == 504){
+                    this.router.navigate(['error']);
+                  }});    
   }
 
   setUserFavorites(all: Favoriteswithid[]){

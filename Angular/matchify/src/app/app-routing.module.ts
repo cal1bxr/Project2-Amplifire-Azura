@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ArtistComponent } from './components/artist/artist.component';
+import { ErrorComponent } from './components/error/error.component';
 
 import { FavoritesComponent } from './components/favorites/favorites.component';
 import { GenreComponent } from './components/genre/genre.component';
@@ -21,9 +22,9 @@ const routes: Routes = [
   {path: 'registration', component: RegistrationComponent},
   {path: 'artists', component: ArtistComponent},
   {path: 'favorites', component: FavoritesComponent},
+  {path: 'genre', component: GenreComponent},
+  {path: 'error', component: ErrorComponent},
   {path: 'genre', component: GenreComponent}
-
-
 ];
 
 @NgModule({
