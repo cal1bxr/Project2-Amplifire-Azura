@@ -12,7 +12,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { SongComponent } from './components/song/song.component';
 
 import { LoginService } from './services/login.service';
-import { ArtistComponent } from ;
+import { ArtistComponent } from './services/artists.service';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { FormsModule } from '@angular/forms';
 import {User} from "./models/user"
