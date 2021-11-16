@@ -1,10 +1,24 @@
 <div class = "container">
     <div class = "grid">
+        <!-- <ul id="card1">
+           <li *ngFor = "let artist of artists.items">
+
+                <div class = "flip">
+                    <div class = "front">
+                        <h1 class = "text-shadow"><img src="{{artist.item[0].images[1].url}}" ></h1>
+                    </div>
+                    <div class = "back">
+                        <h2>{{artist}}</h2>
+                        <h2>{{artist.item[0].name}}</h2>
+                    </div>
+                </div>
+            </li>
+        </ul> -->
         <ul id="card1">
             <li>
                 <div class = "flip">
                     <div class = "front">
-                        <h1 class = "text-shadow"><img src="{{artists.items[0].images[1].url}}" ></h1>
+                        <h1 class = "text-shadow"><img src="{{artists.items[0].images[0].url}}" ></h1>
                     </div>
                     <div class = "back">
                         <h2>{{artists.items[0].name}}</h2>
@@ -12,7 +26,7 @@
                 </div>
             </li>
         </ul>
-        <ul id="card1">
+        <ul id="card2">
             <li>
                 <div class = "flip">
                     <div class = "front">
@@ -24,6 +38,54 @@
                 </div>
             </li>
         </ul>
+        <ul id="card3">
+            <li>
+                <div class = "flip">
+                    <div class = "front">
+                        <h1 class = "text-shadow"><img src="{{artists.items[2].images[1].url}}" ></h1>
+                    </div>
+                    <div class = "back">
+                        <h2>{{artists.items[2].name}}</h2>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul id="card4">
+            <li>
+                <div class = "flip">
+                    <div class = "front">
+                        <h1 class = "text-shadow"><img src="{{artists.items[3].images[1].url}}" ></h1>
+                    </div>
+                    <div class = "back">
+                        <h2>{{artists.items[3].name}}</h2>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul id="card5">
+            <li>
+                <div class = "flip">
+                    <div class = "front">
+                        <h1 class = "text-shadow"><img src="{{artists.items[4].images[1].url}}" ></h1>
+                    </div>
+                    <div class = "back">
+                        <h2>{{artists.items[4].name}}</h2>
+                    </div>
+                </div>
+            </li>
+        </ul> 
+        <!-- <ul id="card6">
+            <li>
+                <div class = "flip">
+                    <div class = "front">
+                        <h1 class = "text-shadow"><img src="{{artists.items[5].images[1].url}}" ></h1>
+                    </div>
+                    <div class = "back">
+                        <h2>{{artists.items[5].name}}</h2>
+                    </div>
+                </div>
+            </li>
+        </ul> -->
         
 
     </div>
