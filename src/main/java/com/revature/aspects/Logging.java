@@ -18,27 +18,27 @@ public class Logging {
         log.warn(joinPoint.getTarget() + " invoked " + joinPoint.getSignature() + " with param " + joinPoint.getArgs());
     }
 
-    @AfterReturning(pointcut="execution(* findByUsername(..))", returning=
+    @AfterReturning(pointcut="execution(* findByEmail(..))", returning=
             "returnedObject")
     public void logSearchByUsername(JoinPoint joinPoint,
                                     Object returnedObject) {
         log.warn(joinPoint.getTarget() + " invoked " + joinPoint.getSignature() + " and returned "+returnedObject.toString());
     }
 
-    @AfterThrowing(pointcut="execution(* findByUsername(String))", throwing=
+    @AfterThrowing(pointcut="execution(* findByEmail(String))", throwing=
             "exception")
     public void logUsernameException(JoinPoint joinPoint, Exception exception) {
         log.warn(joinPoint.getTarget() + " invoked " + joinPoint.getSignature() + " and threw " + exception.getMessage());
     }
 
-    @AfterReturning(pointcut="execution(* findBySongName(..))", returning=
+    @AfterReturning(pointcut="execution(* findByFavoriteEmail(..))", returning=
             "returnedObject")
     public void logSearchBySongName(JoinPoint joinPoint,
                                     Object returnedObject) {
         log.warn(joinPoint.getTarget() + " invoked " + joinPoint.getSignature() + " and returned "+returnedObject.toString());
     }
 
-    @AfterThrowing(pointcut="execution(* findByUsername(String))", throwing=
+    @AfterThrowing(pointcut="execution(* findByFavoriteEmail(String))", throwing=
             "exception")
     public void logSongNameException(JoinPoint joinPoint, Exception exception) {
         log.warn(joinPoint.getTarget() + " invoked " + joinPoint.getSignature() + " and threw " + exception.getMessage());
