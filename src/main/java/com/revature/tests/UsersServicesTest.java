@@ -72,7 +72,7 @@ class UsersServicesTest {
         Users user1 = new Users("asd@gmail.com","asd", "dsa", "description of asd", "asd", "asd", "asd", "asd", "asd", "asd");
         when(userDao.findByEmail("asd@gmail.com")).thenReturn(java.util.Optional.of(user1));
 
-        Users returnedUser = usersServices.findByEmail("asd");
+        Users returnedUser = usersServices.findByEmail("asd").get();
         assertEquals("asd", returnedUser.getFirstName());
 
     }

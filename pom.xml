@@ -63,11 +63,7 @@
     <artifactId>maven-resources-plugin</artifactId>
     <version>3.0.2</version>
 </dependency>
-			<dependency>
-				<groupId>com.revature</groupId>
-				<artifactId>matchify</artifactId>
-				<version>0.0.1-SNAPSHOT</version>
-			</dependency>
+			
 			<dependency>
 				<groupId>org.mockito</groupId>
 				<artifactId>mockito-core</artifactId>
