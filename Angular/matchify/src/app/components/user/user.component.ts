@@ -29,6 +29,7 @@ artist6 : any;
       (response: any)=> {console.log(response);
         this.title = response.body.display_name;
                           this.email = response.body.email;
+                
                           this.img = response.body.images[0].url;
                           this.spotifyId = response.body.id;
    },

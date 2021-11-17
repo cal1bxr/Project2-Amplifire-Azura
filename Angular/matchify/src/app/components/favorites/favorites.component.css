@@ -1,19 +1,31 @@
 #favs{
-    position: relative;
+     position: relative; 
     bottom: -200px;
-
+    
 }
 
-
 #explore{
-    position: relative;
-    bottom: -140px;
-
+     position: relative; 
+    bottom: -190px;
+    
 }
 
 #delete{
-    position: relative;
-    top: 135px;
-     
+     position: relative; 
+    top: 185px;
+    
+}
+
+#favFirstName{
+    
+
+}
+
+#theirArtists{
+}
+
+.Header{
+
+  
 }
 

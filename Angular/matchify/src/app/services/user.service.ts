@@ -36,6 +36,7 @@ export class UserService {
   }
 
   getCurrentUserInfo(): Observable<any>{
+    console.log(this.loginService.accessToken);
     return this.http.get<any>(`${APIUSERURI}`, this.httpOptions);
   }
 
