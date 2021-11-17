@@ -27,6 +27,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.mockito.junit.jupiter.MockitoExtension;
@@ -42,9 +43,6 @@ class UsersServicesTest {
     @Before
     public void beforeAll() {
         MockitoAnnotations.openMocks(this);
-    }
-    @BeforeEach
-    void setUp() {
     }
 
     @AfterEach
@@ -72,7 +70,7 @@ class UsersServicesTest {
         Users user1 = new Users("asd@gmail.com","asd", "dsa", "description of asd", "asd", "asd", "asd", "asd", "asd", "asd");
         when(userDao.findByEmail("asd@gmail.com")).thenReturn(java.util.Optional.of(user1));
 
-        Users returnedUser = usersServices.findByEmail("asd");
+        Users returnedUser = usersServices.findByEmail("asd@gmail.com");
         assertEquals("asd", returnedUser.getFirstName());
 
     }
@@ -87,7 +85,16 @@ class UsersServicesTest {
 
     }
 
+    
     @Test               
     void deleteUser() {
+        Users user1 = new Users("asd@gmail.com","asd", "dsa", "description of asd", "asd", "asd", "asd", "asd", "asd", "asd");
+        when(userDao.findByEmail("asd@gmail.com")).thenReturn(java.util.Optional.of(user1));
+
+        usersServices.addOrUpdateUser(user1);
+        usersServices.deleteUser("asd@gmail.com");
+        
+        verify(userDao, times(1)).delete(user1);
+
     }
 }
