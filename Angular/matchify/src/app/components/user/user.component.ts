@@ -14,6 +14,12 @@ title: string = "";
 email: string = "";
 img: null | undefined;
 spotifyId: string = "";
+artist1 : any;
+artist2 : any;
+artist3 : any;
+artist4 : any;
+artist5 : any;
+artist6 : any;
   
   // users: User[] = [];
   constructor(private userService: UserService, private loginService: LoginService, private router: Router) { }

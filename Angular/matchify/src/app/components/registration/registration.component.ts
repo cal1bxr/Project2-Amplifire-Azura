@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ArtistService } from 'src/app/services/artist.service';
-
 import { LoginService } from 'src/app/services/login.service';
 import { RegistrationService } from 'src/app/services/registration.service';
 import { UserService } from 'src/app/services/user.service';
@@ -27,6 +26,7 @@ export class RegistrationComponent implements OnInit {
 
   constructor(private registrationService: RegistrationService, private userService: UserService, private artistService : ArtistService) { }
 
+
   ngOnInit(): void {
      this.userService.getCurrentUserInfo().subscribe((response: any) => {this.useremail = response.email})
   }
@@ -38,13 +38,13 @@ export class RegistrationComponent implements OnInit {
       console.log(this.useremail);
 
 
-      this.artistService.getArtists().subscribe((response: any) => {
-        this.artist1 = response.items[0].artists[0].name
-        this.artist2 = response.items[1].artists[0].name
-        this.artist3 = response.items[2].artists[0].name
-        this.artist4 = response.items[3].artists[0].name
-        this.artist5 = response.items[4].artists[0].name
-        this.artist6 = response.items[5].artists[0].name
+      this.artistService.getArtists().subscribe((response: any) => {let artists = response;
+        this.artist1 = artists.items[0].name;
+        this.artist2 = artists.items[1].name;
+        this.artist3 = artists.items[2].name;
+        this.artist4 = artists.items[3].name;
+        this.artist5 = artists.items[4].name;
+        this.artist6 = artists.items[5].name;
       
 
       this.user = {
@@ -70,4 +70,6 @@ export class RegistrationComponent implements OnInit {
 
   
 
+
 }
+  
