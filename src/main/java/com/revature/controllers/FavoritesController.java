@@ -54,8 +54,8 @@ public class FavoritesController {
     }
 
     @DeleteMapping("/{id}")
-    public  ResponseEntity<Favorites> deleteFavorite(@PathVariable("id") int id){
-        favoriteService.deleteFavorites(id);
+    public  ResponseEntity<Favorites> deleteFavorite(@PathVariable("id") String id){
+        favoriteService.deleteFavorites(Integer.parseInt(id));
         return ResponseEntity.status(HttpStatus.OK).build();
     }
 

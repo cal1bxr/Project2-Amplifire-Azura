@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Favorites } from '../models/favorites';
 import { Favoriteswithid } from '../models/favoriteswithid';
@@ -19,6 +19,7 @@ export class FavoritesService {
   }
 
   deleteFav(oldFavId : number){
-    return this.http.delete('http://localhost:8081/data/favorites'+oldFavId);
+    //let headers = new HttpHeaders().set('access-control-allow-origin',"http://localhost:8081/data/favorites"+oldFavId.toString);
+    return this.http.delete('http://localhost:8081/data/favorites/'+oldFavId.toString()).subscribe((response)=>{console.log(response)});
   }
 }

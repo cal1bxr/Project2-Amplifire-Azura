@@ -26,14 +26,11 @@ useremail : string = '';
   ngOnInit(): void {
 
     this.loginService.getRefreshToken(this.loginService.accessToken, this.loginService.refreshToken, this.loginService.code);
-    this.getFavorites();
-    this.setUserFavorites(this.allFavs);
+    // this.getFavorites();
+    this.generateUserFavorites();
     this.setFavArtists(this.userFavs);
     this.generateFavOptions();
-    this.generateDeleteOptions();
-
-    console.log(this.allFavs);
-    console.log(this.userFavs);
+   // this.generateDeleteOptions();
    
   }
 
@@ -41,21 +38,76 @@ useremail : string = '';
     this.favService.getAllFavorites().subscribe(
       (response: Favoriteswithid[]) => {
         this.allFavs = response;
+        console.log(this.allFavs);
       },
       (error: any) => {console.log("Http error: ", error);
                   if(error.status == 503 || error.status == 504){
                     this.router.navigate(['error']);
-                  }});    
+                  }});
   }
 
-  setUserFavorites(all: Favoriteswithid[]){
+  generateUserFavorites(){
 
-    this.userService.getCurrentUserInfo().subscribe((response: any) => {this.useremail = response.email; console.log(response); return this.useremail})
-    for(let temp of all){
-      if(temp.email === this.useremail){
-        this.userFavs.push(temp);
-      }
-    }
+    this.userService.getCurrentUserInfo().subscribe((response: any) => {this.useremail = response.body.email; console.log(response); console.log(response.email);
+      this.favService.getAllFavorites().subscribe((response: any) => {this.allFavs = response; console.log(this.allFavs);
+        for(let temp of this.allFavs){
+          if(temp.email === this.useremail){
+            this.userFavs.push(temp);
+          }
+        }
+        console.log(this.userFavs);
+
+        this.userService.getAllUsers().subscribe((response : any ) => { this.allUsers = response; console.log(this.allUsers);
+          for(let temp of this.userFavs){
+            for(let auser of this.allUsers){
+              if(temp.favoriteEmail === auser.email){
+
+                console.log(temp.email);
+
+                let name = document.createElement("p");
+                let artists = document.createElement("p");
+                let deleter = document.createElement("button");
+                
+                name.setAttribute("style", "margin-top: 10px; margin-right: 100px; margin-left: 100px;");
+                artists.setAttribute("style", "margin-top: 10px;");
+                deleter.setAttribute("style", "padding: 14px 40px; background-color: LightCoral;");
+                
+            
+                if(auser != undefined && auser.email != undefined && auser.firstName){
+                
+                name.innerHTML =  auser.firstName;
+                artists.innerHTML = auser.artist1+", "+auser.artist2+", "+auser.artist3+", "+auser.artist4+", "+auser.artist5+", "+auser.artist6;
+                deleter.innerHTML =  auser.firstName;
+                }
+                
+                
+
+                console.log(temp.email);
+              
+            deleter.onclick = () => {
+              
+              alert("Deleted Favorite");
+             // var backtonumber :number = Number(deleter.value);
+              this.favService.deleteFav(temp.favID);
+              console.log(temp);
+              console.log(temp.favID);
+
+            }
+              
+              
+              document.getElementById("favFirstName")!.appendChild(name);
+              document.getElementById("theirArtists")!.appendChild(artists);
+              document.getElementById("deleteForm")!.appendChild(deleter);
+                
+
+              }
+            } 
+          }
+        })
+      })
+    
+  })
+    
   }
 
 setFavArtists(favs : Favoriteswithid[]){
@@ -71,7 +123,7 @@ setFavArtists(favs : Favoriteswithid[]){
 }
 
 generateFavOptions(){
-  this.userService.getAllUsers().subscribe((response: any) => {this.allUsers = response; console.log(response);
+  this.userService.getAllUsers().subscribe((response: any) => {this.allUsers = response; 
   
     for(let temp of this.allUsers){
       let name = document.createElement("p");
@@ -87,10 +139,11 @@ generateFavOptions(){
       name.innerHTML =  temp.firstName+"'s top artists:";
       artists.innerHTML = temp.artist1+", "+temp.artist2+", "+temp.artist3+", "+temp.artist4+", "+temp.artist5+", "+temp.artist6;
       btn.value = temp.email;
+      
       }
       btn.onclick = () => {
         
-        alert("Add Fav is clicked");
+        alert("Added Favorite");
         let newFav = new Favorites(this.useremail, btn.value);
         console.log(newFav);
         this.favService.createFav(newFav);
@@ -102,8 +155,6 @@ generateFavOptions(){
       document.getElementById("exploreForm")!.appendChild(artists);
       document.getElementById("exploreForm")!.appendChild(btn);
       
-
-
     }
    
   })    
@@ -113,32 +164,83 @@ generateFavOptions(){
 generateDeleteOptions(){
   
 
-  for(let i of this.userFavs){
-
-    for(let temp of this.allUsers){
-
-      if(i.favoriteEmail === temp.email){
-        let btn = document.createElement("button");
-        if(temp.firstName != undefined){
-        btn.innerHTML = temp.firstName;
-        btn.value = i.id.toString();
+  this.userService.getCurrentUserInfo().subscribe((response: any) => {this.useremail = response.body.email; console.log(response); console.log(response.email);
+    this.favService.getAllFavorites().subscribe((response: any) => {this.allFavs = response; console.log(this.allFavs);
+      for(let temp of this.allFavs){
+        if(temp.email === this.useremail){
+          this.userFavs.push(temp);
         }
-        btn.onclick = () => {
-          
-          alert("Delete is clicked");
-          var backtonumber :number = Number(btn.value);
-          this.favService.deleteFav(backtonumber);
-        //  window.location.reload();
-
-        }
-        
-        document.getElementById("deleteForm")!.appendChild(btn);
       }
-    }
-  }
+      console.log(this.userFavs);
+
+      this.userService.getAllUsers().subscribe((response : any ) => { this.allUsers = response; console.log(this.allUsers);
+        for(let temp of this.userFavs){
+          for(let auser of this.allUsers){
+            if(temp.favoriteEmail === auser.email){
+
+              console.log(temp.email);
+
+              let deleter = document.createElement("button");
+              
+          
+              if(auser != undefined && auser.firstName != undefined){
+              
+              deleter.innerHTML =  auser.firstName;
+             // deleter.value = temp.id.toString();
+            }
+            deleter.onclick = () => {
+              
+              alert("Deleted Favorite");
+             // var backtonumber :number = Number(deleter.value);
+              this.favService.deleteFav(temp.favID);
+              console.log(temp);
+              console.log(temp.favID);
+
+            }
+              
+              document.getElementById("deleteForm")!.appendChild(deleter);
+
+            }
+          } 
+        }
+      })
+    })
+  
+})
+}
+
+
+
+
+
+
+
+//   for(let i of this.userFavs){
+
+//     for(let temp of this.allUsers){
+
+//       if(i.favoriteEmail === temp.email){
+//         let btn = document.createElement("button");
+//         if(temp.firstName != undefined){
+//         btn.innerHTML = temp.firstName;
+//         btn.value = i.id.toString();
+//         }
+//         btn.onclick = () => {
+          
+//           alert("Delete is clicked");
+//           var backtonumber :number = Number(btn.value);
+//           this.favService.deleteFav(backtonumber);
+//         //  window.location.reload();
+
+//         }
+        
+//         document.getElementById("deleteForm")!.appendChild(btn);
+//       }
+//     }
+//   }
       
 
-}
+// }
 
 
 }

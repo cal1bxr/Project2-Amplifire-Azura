@@ -1,12 +1,12 @@
 export class Favoriteswithid {
 
-    public id : number;
+    public favID : number;
     public email :string;
     public favoriteEmail: string;
 
-    constructor(id : number, email:string, favoriteEmail:string){
+    constructor(favID : number, email:string, favoriteEmail:string){
 
-        this.id = id;
+        this.favID = favID;
         this.email=email;
         this.favoriteEmail = favoriteEmail;
     }

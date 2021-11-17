@@ -5,28 +5,32 @@
     <table class="table">
         <thead>
             <tr>
-                <th scope="col">Name</th>
-                <th scope="col">   Top Artists</th>
-                <th scope="col">   Top Genres</th>
+                <th scope="col" class="Header">Name</th>
+                
+                <th scope="col" class="Header">Top Artists</th>
+                <!-- <th scope="col">   Top Genres</th> -->
             </tr>
         </thead>
          <tbody>
-            <tr *ngFor="let f of favArtists" >
-                <td >{{f.firstName}}</td>
+             <tr>
+            <!-- <tr *ngFor="let f of favArtists" > -->
+                <!-- <td >{{f.firstName}}</td> -->
+                <td id="favFirstName"></td>
+                
                 <td>
                     <table>
                         <tbody>
-                            <tr>
-                                <td>{{f.artist1}} </td>
+                            <tr id = "theirArtists">
+                                <!-- <td>{{f.artist1}} </td>
                                 <td>{{f.artist2}} </td>
                                 <td>{{f.artist3}} </td>
                                 <td>{{f.artist4}} </td>
                                 <td>{{f.artist5}} </td>
-                                <td>{{f.artist6}} </td>
+                                <td>{{f.artist6}} </td> -->
                             </tr>
                         </tbody>
 
-                    </table>
+                </table>
 
                 </td>
                 <!-- <td>
@@ -49,7 +53,7 @@
 <br>
 <div class="container" id = "explore">
     <h1>Explore other users!</h1>
-    <p> Click the a user's button to add them to your favorites list:</p>
+    <p>To add a user to your favorites, first make sure you are registed and then click the button beneath them</p>
     <br>
         <form id="exploreForm">
             
