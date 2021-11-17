@@ -15,7 +15,7 @@ export class FavoritesService {
   }
 
   createFav(newFav : Favorites){
-    return this.http.post('http://localhost:8081/data/favorites', newFav);
+    return this.http.post('http://localhost:8081/data/favorites', newFav).subscribe((response)=>{console.log(response)});
   }
 
   deleteFav(oldFavId : number){

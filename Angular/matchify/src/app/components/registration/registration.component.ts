@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ArtistService } from 'src/app/services/artist.service';
 
 import { LoginService } from 'src/app/services/login.service';
 import { RegistrationService } from 'src/app/services/registration.service';
@@ -17,8 +18,14 @@ export class RegistrationComponent implements OnInit {
   @Input() description!: string;
   useremail: string = "";
   user: any;
+  artist1 : any;
+  artist2 : any;
+  artist3 : any;
+  artist4 : any;
+  artist5 : any;
+  artist6 : any;
 
-  constructor(private registrationService: RegistrationService, private userService: UserService, private loginService : LoginService) { }
+  constructor(private registrationService: RegistrationService, private userService: UserService, private artistService : ArtistService) { }
 
   ngOnInit(): void {
      this.userService.getCurrentUserInfo().subscribe((response: any) => {this.useremail = response.email})
@@ -26,24 +33,36 @@ export class RegistrationComponent implements OnInit {
 
   login(fName: any, lName: any, des: any){
 
+
     this.userService.getCurrentUserInfo().subscribe((response: any) => {this.useremail = response.body.email
       console.log(this.useremail);
 
-    this.user = {
-      firstName: fName.value,
-      lastName: lName.value,
-      email: this.useremail,
-      description: des.value,
-      artist1: undefined,
-      artist2: undefined,
-      artist3: undefined,
-      artist4: undefined,
-      artist5: undefined,
-      artist6: undefined
-    }
-    console.log(this.user);    
+
+      this.artistService.getArtists().subscribe((response: any) => {
+        this.artist1 = response.items[0].artists[0].name
+        this.artist2 = response.items[1].artists[0].name
+        this.artist3 = response.items[2].artists[0].name
+        this.artist4 = response.items[3].artists[0].name
+        this.artist5 = response.items[4].artists[0].name
+        this.artist6 = response.items[5].artists[0].name
+      
+
+      this.user = {
+        firstName: fName.value,
+        lastName: lName.value,
+        email: this.useremail,
+        description: des.value,
+        artist1: this.artist1,
+        artist2: this.artist2,
+        artist3: this.artist3,
+        artist4: this.artist4,
+        artist5: this.artist5,
+        artist6: this.artist6
+      }
+    console.log(this.user);
     this.registrationService.postRegistration(this.user);
   })
+})
     // console.log(this.user);
     // this.registrationService.postRegistration(this.user);
   }

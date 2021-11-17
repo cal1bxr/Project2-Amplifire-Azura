@@ -29,8 +29,12 @@ useremail : string = '';
     this.getFavorites();
     this.setUserFavorites(this.allFavs);
     this.setFavArtists(this.userFavs);
-    this.generateFavOptions(this.useremail);
+    this.generateFavOptions();
     this.generateDeleteOptions();
+
+    console.log(this.allFavs);
+    console.log(this.userFavs);
+   
   }
 
  getFavorites() {
@@ -46,7 +50,7 @@ useremail : string = '';
 
   setUserFavorites(all: Favoriteswithid[]){
 
-    this.userService.getCurrentUserInfo().subscribe((response: any) => {this.useremail = response.email; console.log(response)})
+    this.userService.getCurrentUserInfo().subscribe((response: any) => {this.useremail = response.email; console.log(response); return this.useremail})
     for(let temp of all){
       if(temp.email === this.useremail){
         this.userFavs.push(temp);
@@ -66,25 +70,40 @@ setFavArtists(favs : Favoriteswithid[]){
   }
 }
 
-generateFavOptions(useremail : string){
+generateFavOptions(){
   this.userService.getAllUsers().subscribe((response: any) => {this.allUsers = response; console.log(response);
   
     for(let temp of this.allUsers){
+      let name = document.createElement("p");
+      let artists = document.createElement("p");
       let btn = document.createElement("button");
+      btn.setAttribute("style", "background-color: DeepSkyBlue;");
+      
+      
+      
+
       if(temp != undefined && temp.email != undefined){
-      btn.innerHTML = temp.firstName+" "+temp.artist1+" "+temp.artist2+" "+temp.artist3+" "+temp.artist4+" "+temp.artist5+" "+temp.artist6;
+        btn.innerHTML = " Add "+temp.firstName+" ";
+      name.innerHTML =  temp.firstName+"'s top artists:";
+      artists.innerHTML = temp.artist1+", "+temp.artist2+", "+temp.artist3+", "+temp.artist4+", "+temp.artist5+", "+temp.artist6;
       btn.value = temp.email;
       }
       btn.onclick = () => {
         
         alert("Add Fav is clicked");
-        let newFav = new Favorites(useremail, btn.value);
+        let newFav = new Favorites(this.useremail, btn.value);
+        console.log(newFav);
         this.favService.createFav(newFav);
-        window.location.reload();
+       // window.location.reload();
 
       }
       
+      document.getElementById("exploreForm")!.appendChild(name);
+      document.getElementById("exploreForm")!.appendChild(artists);
       document.getElementById("exploreForm")!.appendChild(btn);
+      
+
+
     }
    
   })    
@@ -109,7 +128,7 @@ generateDeleteOptions(){
           alert("Delete is clicked");
           var backtonumber :number = Number(btn.value);
           this.favService.deleteFav(backtonumber);
-          window.location.reload();
+        //  window.location.reload();
 
         }
         
