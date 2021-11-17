@@ -92,6 +92,8 @@ useremail : string = '';
               console.log(temp);
               console.log(temp.favID);
 
+            
+              
             }
               
               
@@ -148,9 +150,13 @@ generateFavOptions(){
         console.log(newFav);
         this.favService.createFav(newFav);
        // window.location.reload();
+       
+       
 
       }
-      
+      name.setAttribute("class", "updateable");
+      artists.setAttribute("class", "updateable");
+      btn.setAttribute("class", "updateable");
       document.getElementById("exploreForm")!.appendChild(name);
       document.getElementById("exploreForm")!.appendChild(artists);
       document.getElementById("exploreForm")!.appendChild(btn);
