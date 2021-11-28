@@ -33,8 +33,9 @@ public class UsersServices {
         userDao.save(user);
     }
 
-    public void deleteUser(String email){
-        Users user = (Users) findByEmail(email);
-        userDao.delete(user);
+    public boolean deleteUser(String email){
+            Users user = findByEmail(email);
+            userDao.delete(user);
+        return true;
     }
 }

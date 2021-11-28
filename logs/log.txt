@@ -24292,3 +24292,355 @@ Unconditional classes:
 00:37:41.133 [] [RMI TCP Connection(7)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 00:37:41.137 [] [RMI TCP Connection(7)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 00:37:41.144 [] [RMI TCP Connection(7)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+08:49:03.462 [] [restartedMain] INFO  com.revature.MatchifyApplication - Starting MatchifyApplication using Java 15 on Blake-PC with PID 20428 (C:\Users\Me\Desktop\Project2-Amplifire-Azura\target\classes started by Me in C:\Users\Me\Desktop\Project2-Amplifire-Azura)
+08:49:03.468 [] [restartedMain] INFO  com.revature.MatchifyApplication - No active profile set, falling back to default profiles: default
+08:49:03.619 [] [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+08:49:03.619 [] [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+08:49:06.289 [] [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+08:49:06.488 [] [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 164 ms. Found 2 JPA repository interfaces.
+08:49:08.664 [] [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+08:49:08.730 [] [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+08:49:08.731 [] [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+08:49:08.732 [] [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
+08:49:09.288 [] [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/data] - Initializing Spring embedded WebApplicationContext
+08:49:09.288 [] [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5668 ms
+08:49:10.354 [] [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+08:49:10.494 [] [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.32.Final
+08:49:10.895 [] [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+08:49:11.188 [] [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+08:49:12.369 [] [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+08:49:12.442 [] [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+08:49:14.571 [] [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+08:49:14.588 [] [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+08:49:16.059 [] [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+08:49:17.775 [] [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+08:49:17.789 [] [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+08:49:17.888 [] [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+08:49:17.949 [] [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path '/data'
+08:49:17.980 [] [restartedMain] INFO  com.revature.MatchifyApplication - Started MatchifyApplication in 15.643 seconds (JVM running for 19.158)
+08:50:45.691 [] [http-nio-8081-exec-1] INFO  o.a.c.c.C.[.[localhost].[/data] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+08:50:45.691 [] [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+08:50:45.693 [] [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+08:50:45.928 [] [http-nio-8081-exec-2] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@492721a3 invoked void com.revature.services.UsersServices.addOrUpdateUser(Users) with param [Ljava.lang.Object;@3644b8b
+08:51:08.096 [] [http-nio-8081-exec-3] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@492721a3 invoked List com.revature.services.UsersServices.findAll() with param [Ljava.lang.Object;@ee1ba6c
+08:51:08.152 [] [http-nio-8081-exec-4] WARN  com.revature.aspects.Logging - com.revature.services.FavoritesService@22e9c43a invoked List com.revature.services.FavoritesService.findAll() with param [Ljava.lang.Object;@ab9d273
+08:51:08.530 [] [http-nio-8081-exec-5] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@492721a3 invoked List com.revature.services.UsersServices.findAll() with param [Ljava.lang.Object;@5ecc41d7
+08:51:29.607 [] [http-nio-8081-exec-7] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@492721a3 invoked List com.revature.services.UsersServices.findAll() with param [Ljava.lang.Object;@32544011
+08:51:29.644 [] [http-nio-8081-exec-8] WARN  com.revature.aspects.Logging - com.revature.services.FavoritesService@22e9c43a invoked void com.revature.services.FavoritesService.addOrUpdateFavorites(Favorites) with param [Ljava.lang.Object;@1a4aaff
+08:51:35.864 [] [http-nio-8081-exec-9] WARN  com.revature.aspects.Logging - com.revature.services.FavoritesService@22e9c43a invoked void com.revature.services.FavoritesService.addOrUpdateFavorites(Favorites) with param [Ljava.lang.Object;@1f22b23e
+08:51:35.864 [] [http-nio-8081-exec-10] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@492721a3 invoked List com.revature.services.UsersServices.findAll() with param [Ljava.lang.Object;@5d04c7cb
+08:52:28.650 [] [http-nio-8081-exec-1] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@492721a3 invoked void com.revature.services.UsersServices.addOrUpdateUser(Users) with param [Ljava.lang.Object;@5f8cab2
+08:52:52.786 [] [http-nio-8081-exec-4] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@492721a3 invoked List com.revature.services.UsersServices.findAll() with param [Ljava.lang.Object;@997686d
+08:52:52.847 [] [http-nio-8081-exec-3] WARN  com.revature.aspects.Logging - com.revature.services.FavoritesService@22e9c43a invoked List com.revature.services.FavoritesService.findAll() with param [Ljava.lang.Object;@301fb98f
+08:52:53.050 [] [http-nio-8081-exec-5] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@492721a3 invoked List com.revature.services.UsersServices.findAll() with param [Ljava.lang.Object;@7faf347d
+08:52:57.015 [] [http-nio-8081-exec-6] WARN  com.revature.aspects.Logging - com.revature.services.FavoritesService@22e9c43a invoked void com.revature.services.FavoritesService.addOrUpdateFavorites(Favorites) with param [Ljava.lang.Object;@49680808
+08:52:57.019 [] [http-nio-8081-exec-7] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@492721a3 invoked List com.revature.services.UsersServices.findAll() with param [Ljava.lang.Object;@e337b4b
+08:57:07.958 [] [http-nio-8081-exec-10] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@492721a3 invoked List com.revature.services.UsersServices.findAll() with param [Ljava.lang.Object;@3596e5c7
+08:57:24.324 [] [http-nio-8081-exec-1] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@492721a3 invoked List com.revature.services.UsersServices.findAll() with param [Ljava.lang.Object;@2ac4d788
+08:57:24.411 [] [http-nio-8081-exec-2] WARN  com.revature.aspects.Logging - com.revature.services.FavoritesService@22e9c43a invoked List com.revature.services.FavoritesService.findAll() with param [Ljava.lang.Object;@40ba80a4
+08:57:24.587 [] [http-nio-8081-exec-4] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@492721a3 invoked List com.revature.services.UsersServices.findAll() with param [Ljava.lang.Object;@51668bb0
+08:58:31.411 [] [http-nio-8081-exec-6] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@492721a3 invoked List com.revature.services.UsersServices.findAll() with param [Ljava.lang.Object;@f3385fc
+08:59:14.484 [] [http-nio-8081-exec-7] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@492721a3 invoked List com.revature.services.UsersServices.findAll() with param [Ljava.lang.Object;@61d84617
+08:59:14.629 [] [http-nio-8081-exec-8] WARN  com.revature.aspects.Logging - com.revature.services.FavoritesService@22e9c43a invoked List com.revature.services.FavoritesService.findAll() with param [Ljava.lang.Object;@12e10883
+08:59:14.761 [] [http-nio-8081-exec-9] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@492721a3 invoked List com.revature.services.UsersServices.findAll() with param [Ljava.lang.Object;@5ae1aef6
+08:59:39.424 [] [http-nio-8081-exec-10] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@492721a3 invoked void com.revature.services.UsersServices.addOrUpdateUser(Users) with param [Ljava.lang.Object;@1e58b943
+08:59:44.464 [] [http-nio-8081-exec-1] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@492721a3 invoked List com.revature.services.UsersServices.findAll() with param [Ljava.lang.Object;@3f630f9
+08:59:44.530 [] [http-nio-8081-exec-2] WARN  com.revature.aspects.Logging - com.revature.services.FavoritesService@22e9c43a invoked List com.revature.services.FavoritesService.findAll() with param [Ljava.lang.Object;@65254159
+08:59:44.754 [] [http-nio-8081-exec-4] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@492721a3 invoked List com.revature.services.UsersServices.findAll() with param [Ljava.lang.Object;@42b7b28c
+08:59:47.150 [] [http-nio-8081-exec-3] WARN  com.revature.aspects.Logging - com.revature.services.FavoritesService@22e9c43a invoked void com.revature.services.FavoritesService.addOrUpdateFavorites(Favorites) with param [Ljava.lang.Object;@33d1d3d8
+08:59:50.895 [] [http-nio-8081-exec-5] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@492721a3 invoked List com.revature.services.UsersServices.findAll() with param [Ljava.lang.Object;@6961e8dd
+08:59:50.982 [] [http-nio-8081-exec-6] WARN  com.revature.aspects.Logging - com.revature.services.FavoritesService@22e9c43a invoked List com.revature.services.FavoritesService.findAll() with param [Ljava.lang.Object;@75b27f6f
+08:59:51.161 [] [http-nio-8081-exec-7] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@492721a3 invoked List com.revature.services.UsersServices.findAll() with param [Ljava.lang.Object;@317695ff
+08:59:57.063 [] [http-nio-8081-exec-8] WARN  com.revature.aspects.Logging - com.revature.services.FavoritesService@22e9c43a invoked void com.revature.services.FavoritesService.addOrUpdateFavorites(Favorites) with param [Ljava.lang.Object;@4cf6f2a6
+09:00:06.826 [] [http-nio-8081-exec-9] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@492721a3 invoked List com.revature.services.UsersServices.findAll() with param [Ljava.lang.Object;@67b63428
+09:00:06.890 [] [http-nio-8081-exec-10] WARN  com.revature.aspects.Logging - com.revature.services.FavoritesService@22e9c43a invoked List com.revature.services.FavoritesService.findAll() with param [Ljava.lang.Object;@1b0fac5e
+09:00:07.089 [] [http-nio-8081-exec-1] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@492721a3 invoked List com.revature.services.UsersServices.findAll() with param [Ljava.lang.Object;@54f62971
+09:03:21.710 [] [http-nio-8081-exec-3] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@492721a3 invoked void com.revature.services.UsersServices.addOrUpdateUser(Users) with param [Ljava.lang.Object;@1a7e2fcf
+09:03:22.614 [] [http-nio-8081-exec-5] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@492721a3 invoked List com.revature.services.UsersServices.findAll() with param [Ljava.lang.Object;@411a38e5
+09:03:22.715 [] [http-nio-8081-exec-6] WARN  com.revature.aspects.Logging - com.revature.services.FavoritesService@22e9c43a invoked List com.revature.services.FavoritesService.findAll() with param [Ljava.lang.Object;@b093725
+09:03:22.888 [] [http-nio-8081-exec-7] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@492721a3 invoked List com.revature.services.UsersServices.findAll() with param [Ljava.lang.Object;@3e8de7c7
+09:03:26.578 [] [http-nio-8081-exec-8] WARN  com.revature.aspects.Logging - com.revature.services.FavoritesService@22e9c43a invoked void com.revature.services.FavoritesService.addOrUpdateFavorites(Favorites) with param [Ljava.lang.Object;@398ce2d1
+09:03:30.147 [] [http-nio-8081-exec-9] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@492721a3 invoked List com.revature.services.UsersServices.findAll() with param [Ljava.lang.Object;@62781343
+09:03:30.234 [] [http-nio-8081-exec-10] WARN  com.revature.aspects.Logging - com.revature.services.FavoritesService@22e9c43a invoked List com.revature.services.FavoritesService.findAll() with param [Ljava.lang.Object;@11c4faaa
+09:03:30.418 [] [http-nio-8081-exec-1] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@492721a3 invoked List com.revature.services.UsersServices.findAll() with param [Ljava.lang.Object;@606847f7
+09:03:33.010 [] [http-nio-8081-exec-2] WARN  com.revature.aspects.Logging - com.revature.services.FavoritesService@22e9c43a invoked void com.revature.services.FavoritesService.addOrUpdateFavorites(Favorites) with param [Ljava.lang.Object;@6d82079f
+09:03:34.665 [] [http-nio-8081-exec-4] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@492721a3 invoked List com.revature.services.UsersServices.findAll() with param [Ljava.lang.Object;@64e9069
+09:03:34.726 [] [http-nio-8081-exec-3] WARN  com.revature.aspects.Logging - com.revature.services.FavoritesService@22e9c43a invoked List com.revature.services.FavoritesService.findAll() with param [Ljava.lang.Object;@22a6cd84
+09:03:34.870 [] [http-nio-8081-exec-5] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@492721a3 invoked List com.revature.services.UsersServices.findAll() with param [Ljava.lang.Object;@a03f1a
+09:03:37.300 [] [http-nio-8081-exec-7] WARN  com.revature.aspects.Logging - com.revature.services.FavoritesService@22e9c43a invoked void com.revature.services.FavoritesService.deleteFavorites(int) with param [Ljava.lang.Object;@a55f17c
+09:03:39.017 [] [http-nio-8081-exec-8] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@492721a3 invoked List com.revature.services.UsersServices.findAll() with param [Ljava.lang.Object;@2b488558
+09:03:39.086 [] [http-nio-8081-exec-9] WARN  com.revature.aspects.Logging - com.revature.services.FavoritesService@22e9c43a invoked List com.revature.services.FavoritesService.findAll() with param [Ljava.lang.Object;@1b7bc3cf
+09:03:39.322 [] [http-nio-8081-exec-10] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@492721a3 invoked List com.revature.services.UsersServices.findAll() with param [Ljava.lang.Object;@19490363
+09:03:51.946 [] [http-nio-8081-exec-1] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@492721a3 invoked void com.revature.services.UsersServices.addOrUpdateUser(Users) with param [Ljava.lang.Object;@26221a6f
+09:03:53.382 [] [http-nio-8081-exec-2] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@492721a3 invoked List com.revature.services.UsersServices.findAll() with param [Ljava.lang.Object;@70297e3c
+09:03:53.446 [] [http-nio-8081-exec-4] WARN  com.revature.aspects.Logging - com.revature.services.FavoritesService@22e9c43a invoked List com.revature.services.FavoritesService.findAll() with param [Ljava.lang.Object;@66b02c14
+09:03:53.580 [] [http-nio-8081-exec-3] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@492721a3 invoked List com.revature.services.UsersServices.findAll() with param [Ljava.lang.Object;@70d3d37
+09:03:59.429 [] [RMI TCP Connection(25)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+09:03:59.479 [] [RMI TCP Connection(25)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+09:03:59.490 [] [RMI TCP Connection(25)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+09:03:59.499 [] [RMI TCP Connection(25)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+09:12:16.409 [] [restartedMain] INFO  com.revature.MatchifyApplication - Starting MatchifyApplication using Java 15 on Blake-PC with PID 7688 (C:\Users\Me\Desktop\Project2-Amplifire-Azura\target\classes started by Me in C:\Users\Me\Desktop\Project2-Amplifire-Azura)
+09:12:16.414 [] [restartedMain] INFO  com.revature.MatchifyApplication - No active profile set, falling back to default profiles: default
+09:12:16.499 [] [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+09:12:16.500 [] [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+09:12:18.149 [] [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+09:12:18.283 [] [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 109 ms. Found 2 JPA repository interfaces.
+09:12:19.942 [] [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+09:12:19.962 [] [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+09:12:19.963 [] [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+09:12:19.963 [] [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
+09:12:20.245 [] [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/data] - Initializing Spring embedded WebApplicationContext
+09:12:20.245 [] [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3743 ms
+09:12:21.063 [] [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+09:12:21.147 [] [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.32.Final
+09:12:21.380 [] [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+09:12:21.626 [] [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+09:12:22.692 [] [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+09:12:22.752 [] [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+09:12:24.435 [] [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+09:12:24.452 [] [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+09:12:25.349 [] [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+09:12:26.439 [] [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+09:12:26.451 [] [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+09:12:26.513 [] [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+09:12:26.545 [] [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path '/data'
+09:12:26.568 [] [restartedMain] INFO  com.revature.MatchifyApplication - Started MatchifyApplication in 10.749 seconds (JVM running for 12.352)
+09:13:35.435 [] [http-nio-8081-exec-1] INFO  o.a.c.c.C.[.[localhost].[/data] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+09:13:35.436 [] [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+09:13:35.437 [] [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+09:13:35.483 [] [http-nio-8081-exec-1] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@612cd77e invoked List com.revature.services.UsersServices.findAll() with param [Ljava.lang.Object;@1348f9e4
+09:13:35.484 [] [http-nio-8081-exec-2] WARN  com.revature.aspects.Logging - com.revature.services.FavoritesService@660d964a invoked List com.revature.services.FavoritesService.findAll() with param [Ljava.lang.Object;@27bc6b43
+09:13:35.989 [] [http-nio-8081-exec-3] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@612cd77e invoked List com.revature.services.UsersServices.findAll() with param [Ljava.lang.Object;@58bc272a
+09:13:44.229 [] [http-nio-8081-exec-4] WARN  com.revature.aspects.Logging - com.revature.services.FavoritesService@660d964a invoked void com.revature.services.FavoritesService.addOrUpdateFavorites(Favorites) with param [Ljava.lang.Object;@112ac2a7
+09:13:45.804 [] [http-nio-8081-exec-5] WARN  com.revature.aspects.Logging - com.revature.services.FavoritesService@660d964a invoked void com.revature.services.FavoritesService.addOrUpdateFavorites(Favorites) with param [Ljava.lang.Object;@6d601627
+09:13:47.779 [] [http-nio-8081-exec-6] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@612cd77e invoked List com.revature.services.UsersServices.findAll() with param [Ljava.lang.Object;@2743e41d
+09:13:47.837 [] [http-nio-8081-exec-7] WARN  com.revature.aspects.Logging - com.revature.services.FavoritesService@660d964a invoked List com.revature.services.FavoritesService.findAll() with param [Ljava.lang.Object;@3f5524b6
+09:13:48.038 [] [http-nio-8081-exec-8] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@612cd77e invoked List com.revature.services.UsersServices.findAll() with param [Ljava.lang.Object;@5c79a5be
+09:13:51.879 [] [http-nio-8081-exec-9] WARN  com.revature.aspects.Logging - com.revature.services.FavoritesService@660d964a invoked void com.revature.services.FavoritesService.deleteFavorites(int) with param [Ljava.lang.Object;@2c69657b
+09:13:55.517 [] [http-nio-8081-exec-10] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@612cd77e invoked List com.revature.services.UsersServices.findAll() with param [Ljava.lang.Object;@7f9972e
+09:13:55.580 [] [http-nio-8081-exec-2] WARN  com.revature.aspects.Logging - com.revature.services.FavoritesService@660d964a invoked List com.revature.services.FavoritesService.findAll() with param [Ljava.lang.Object;@469342d3
+09:13:55.735 [] [http-nio-8081-exec-1] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@612cd77e invoked List com.revature.services.UsersServices.findAll() with param [Ljava.lang.Object;@bfa666f
+09:14:13.607 [] [RMI TCP Connection(11)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+09:14:13.651 [] [RMI TCP Connection(11)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+09:14:13.656 [] [RMI TCP Connection(11)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+09:14:13.664 [] [RMI TCP Connection(11)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+09:14:28.662 [] [restartedMain] INFO  com.revature.MatchifyApplication - Starting MatchifyApplication using Java 15 on Blake-PC with PID 2116 (C:\Users\Me\Desktop\Project2-Amplifire-Azura\target\classes started by Me in C:\Users\Me\Desktop\Project2-Amplifire-Azura)
+09:14:28.666 [] [restartedMain] INFO  com.revature.MatchifyApplication - No active profile set, falling back to default profiles: default
+09:14:28.726 [] [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+09:14:28.726 [] [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+09:14:29.905 [] [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+09:14:29.986 [] [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 71 ms. Found 2 JPA repository interfaces.
+09:14:31.104 [] [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+09:14:31.118 [] [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+09:14:31.119 [] [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+09:14:31.119 [] [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
+09:14:31.288 [] [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/data] - Initializing Spring embedded WebApplicationContext
+09:14:31.289 [] [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2562 ms
+09:14:31.829 [] [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+09:14:31.940 [] [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.32.Final
+09:14:32.184 [] [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+09:14:32.340 [] [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+09:14:33.313 [] [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+09:14:33.358 [] [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+09:14:34.842 [] [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+09:14:34.855 [] [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+09:14:35.643 [] [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+09:14:36.685 [] [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+09:14:36.695 [] [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+09:14:36.753 [] [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+09:14:36.784 [] [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path '/data'
+09:14:36.806 [] [restartedMain] INFO  com.revature.MatchifyApplication - Started MatchifyApplication in 8.64 seconds (JVM running for 10.15)
+09:15:25.835 [] [http-nio-8081-exec-1] INFO  o.a.c.c.C.[.[localhost].[/data] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+09:15:25.836 [] [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+09:15:25.844 [] [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 8 ms
+09:15:25.942 [] [http-nio-8081-exec-2] WARN  com.revature.aspects.Logging - com.revature.services.FavoritesService@19533e6a invoked List com.revature.services.FavoritesService.findAll() with param [Ljava.lang.Object;@161a6348
+09:15:25.943 [] [http-nio-8081-exec-1] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@7b363239 invoked List com.revature.services.UsersServices.findAll() with param [Ljava.lang.Object;@2388f1f8
+09:15:26.412 [] [http-nio-8081-exec-3] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@7b363239 invoked List com.revature.services.UsersServices.findAll() with param [Ljava.lang.Object;@6e2dab4b
+09:15:32.368 [] [RMI TCP Connection(8)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+09:15:32.406 [] [RMI TCP Connection(8)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+09:15:32.411 [] [RMI TCP Connection(8)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+09:15:32.418 [] [RMI TCP Connection(8)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+09:28:51.616 [] [restartedMain] INFO  com.revature.MatchifyApplication - Starting MatchifyApplication using Java 15 on Blake-PC with PID 20704 (C:\Users\Me\Desktop\Project2-Amplifire-Azura\target\classes started by Me in C:\Users\Me\Desktop\Project2-Amplifire-Azura)
+09:28:51.620 [] [restartedMain] INFO  com.revature.MatchifyApplication - No active profile set, falling back to default profiles: default
+09:28:51.685 [] [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+09:28:51.686 [] [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+09:28:52.936 [] [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+09:28:53.014 [] [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 66 ms. Found 2 JPA repository interfaces.
+09:28:54.060 [] [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+09:28:54.072 [] [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+09:28:54.073 [] [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+09:28:54.073 [] [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
+09:28:54.263 [] [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/data] - Initializing Spring embedded WebApplicationContext
+09:28:54.263 [] [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2576 ms
+09:28:54.766 [] [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+09:28:54.838 [] [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.32.Final
+09:28:55.038 [] [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+09:28:55.201 [] [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+09:28:56.159 [] [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+09:28:56.206 [] [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+09:28:57.663 [] [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+09:28:57.676 [] [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+09:28:58.464 [] [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+09:28:59.534 [] [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+09:28:59.547 [] [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+09:28:59.620 [] [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+09:28:59.651 [] [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path '/data'
+09:28:59.674 [] [restartedMain] INFO  com.revature.MatchifyApplication - Started MatchifyApplication in 8.59 seconds (JVM running for 10.237)
+09:30:40.941 [] [http-nio-8081-exec-1] INFO  o.a.c.c.C.[.[localhost].[/data] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+09:30:40.942 [] [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+09:30:40.963 [] [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 21 ms
+09:30:41.089 [] [http-nio-8081-exec-1] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@2708b705 invoked List com.revature.services.UsersServices.findAll() with param [Ljava.lang.Object;@226b78ee
+09:30:41.092 [] [http-nio-8081-exec-2] WARN  com.revature.aspects.Logging - com.revature.services.FavoritesService@6c9c2fd4 invoked List com.revature.services.FavoritesService.findAll() with param [Ljava.lang.Object;@6df9061a
+09:30:41.795 [] [http-nio-8081-exec-3] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@2708b705 invoked List com.revature.services.UsersServices.findAll() with param [Ljava.lang.Object;@21ac441
+09:30:48.513 [] [http-nio-8081-exec-4] WARN  com.revature.aspects.Logging - com.revature.services.FavoritesService@6c9c2fd4 invoked void com.revature.services.FavoritesService.addOrUpdateFavorites(Favorites) with param [Ljava.lang.Object;@66c65958
+09:30:51.154 [] [http-nio-8081-exec-5] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@2708b705 invoked List com.revature.services.UsersServices.findAll() with param [Ljava.lang.Object;@5a0a3a50
+09:30:51.247 [] [http-nio-8081-exec-6] WARN  com.revature.aspects.Logging - com.revature.services.FavoritesService@6c9c2fd4 invoked List com.revature.services.FavoritesService.findAll() with param [Ljava.lang.Object;@31b09f1c
+09:30:51.535 [] [http-nio-8081-exec-7] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@2708b705 invoked List com.revature.services.UsersServices.findAll() with param [Ljava.lang.Object;@6940ef13
+09:31:22.445 [] [http-nio-8081-exec-8] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@2708b705 invoked List com.revature.services.UsersServices.findAll() with param [Ljava.lang.Object;@67987d57
+09:31:22.497 [] [http-nio-8081-exec-9] WARN  com.revature.aspects.Logging - com.revature.services.FavoritesService@6c9c2fd4 invoked List com.revature.services.FavoritesService.findAll() with param [Ljava.lang.Object;@268925c
+09:31:22.731 [] [http-nio-8081-exec-10] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@2708b705 invoked List com.revature.services.UsersServices.findAll() with param [Ljava.lang.Object;@198e7d7e
+09:31:49.802 [] [RMI TCP Connection(11)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+09:31:49.856 [] [RMI TCP Connection(11)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+09:31:49.862 [] [RMI TCP Connection(11)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+09:31:49.889 [] [RMI TCP Connection(11)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+09:53:14.305 [] [restartedMain] INFO  com.revature.MatchifyApplication - Starting MatchifyApplication using Java 15 on Blake-PC with PID 5760 (C:\Users\Me\Desktop\Project2-Amplifire-Azura\target\classes started by Me in C:\Users\Me\Desktop\Project2-Amplifire-Azura)
+09:53:14.309 [] [restartedMain] INFO  com.revature.MatchifyApplication - No active profile set, falling back to default profiles: default
+09:53:14.380 [] [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+09:53:14.381 [] [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+09:53:15.574 [] [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+09:53:15.657 [] [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 69 ms. Found 2 JPA repository interfaces.
+09:53:16.751 [] [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+09:53:16.763 [] [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+09:53:16.764 [] [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+09:53:16.764 [] [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
+09:53:16.964 [] [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/data] - Initializing Spring embedded WebApplicationContext
+09:53:16.965 [] [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2584 ms
+09:53:17.493 [] [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+09:53:17.565 [] [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.32.Final
+09:53:17.776 [] [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+09:53:17.944 [] [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+09:53:18.871 [] [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+09:53:18.923 [] [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+09:53:20.488 [] [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+09:53:20.502 [] [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+09:53:21.678 [] [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+09:53:23.031 [] [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+09:53:23.042 [] [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+09:53:23.108 [] [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+09:53:23.141 [] [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path '/data'
+09:53:23.165 [] [restartedMain] INFO  com.revature.MatchifyApplication - Started MatchifyApplication in 9.355 seconds (JVM running for 10.803)
+09:54:37.089 [] [http-nio-8081-exec-1] INFO  o.a.c.c.C.[.[localhost].[/data] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+09:54:37.090 [] [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+09:54:37.091 [] [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+09:54:37.261 [] [http-nio-8081-exec-2] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@74ea92d invoked void com.revature.services.UsersServices.addOrUpdateUser(Users) with param [Ljava.lang.Object;@15774ace
+09:55:18.165 [] [RMI TCP Connection(9)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+09:55:18.216 [] [RMI TCP Connection(9)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+09:55:18.222 [] [RMI TCP Connection(9)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+09:55:18.231 [] [RMI TCP Connection(9)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+11:28:59.667 [] [restartedMain] INFO  com.revature.MatchifyApplication - Starting MatchifyApplication using Java 15 on Blake-PC with PID 10980 (C:\Users\Me\Desktop\Project2-Amplifire-Azura\target\classes started by Me in C:\Users\Me\Desktop\Project2-Amplifire-Azura)
+11:28:59.672 [] [restartedMain] INFO  com.revature.MatchifyApplication - No active profile set, falling back to default profiles: default
+11:28:59.737 [] [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+11:28:59.737 [] [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+11:29:01.032 [] [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+11:29:01.130 [] [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 84 ms. Found 2 JPA repository interfaces.
+11:29:02.229 [] [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+11:29:02.242 [] [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+11:29:02.242 [] [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+11:29:02.243 [] [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
+11:29:02.450 [] [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/data] - Initializing Spring embedded WebApplicationContext
+11:29:02.451 [] [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2713 ms
+11:29:02.947 [] [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+11:29:03.022 [] [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.32.Final
+11:29:03.227 [] [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+11:29:03.384 [] [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+11:29:04.313 [] [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+11:29:04.369 [] [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+11:29:05.834 [] [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+11:29:05.848 [] [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+11:29:06.669 [] [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+11:29:07.841 [] [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+11:29:07.853 [] [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+11:29:07.917 [] [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+11:29:07.949 [] [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path '/data'
+11:29:07.976 [] [restartedMain] INFO  com.revature.MatchifyApplication - Started MatchifyApplication in 8.867 seconds (JVM running for 10.371)
+11:31:20.404 [] [http-nio-8081-exec-2] INFO  o.a.c.c.C.[.[localhost].[/data] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+11:31:20.405 [] [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+11:31:20.408 [] [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+11:31:20.549 [] [http-nio-8081-exec-2] WARN  com.revature.aspects.Logging - com.revature.services.FavoritesService@5ed64c2c invoked List com.revature.services.FavoritesService.findAll() with param [Ljava.lang.Object;@134317a9
+11:31:20.552 [] [http-nio-8081-exec-1] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@4aca6d77 invoked List com.revature.services.UsersServices.findAll() with param [Ljava.lang.Object;@71ea3064
+11:31:21.189 [] [http-nio-8081-exec-3] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@4aca6d77 invoked List com.revature.services.UsersServices.findAll() with param [Ljava.lang.Object;@7d49c059
+11:35:17.634 [] [RMI TCP Connection(15)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+11:35:17.689 [] [RMI TCP Connection(15)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+11:35:17.695 [] [RMI TCP Connection(15)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+11:35:17.705 [] [RMI TCP Connection(15)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+11:36:23.463 [] [restartedMain] INFO  com.revature.MatchifyApplication - Starting MatchifyApplication using Java 15 on Blake-PC with PID 22156 (C:\Users\Me\Desktop\Project2-Amplifire-Azura\target\classes started by Me in C:\Users\Me\Desktop\Project2-Amplifire-Azura)
+11:36:23.469 [] [restartedMain] INFO  com.revature.MatchifyApplication - No active profile set, falling back to default profiles: default
+11:36:23.578 [] [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+11:36:23.578 [] [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+11:36:25.181 [] [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+11:36:25.290 [] [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 95 ms. Found 2 JPA repository interfaces.
+11:36:26.668 [] [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+11:36:26.696 [] [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+11:36:26.697 [] [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+11:36:26.698 [] [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
+11:36:26.970 [] [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/data] - Initializing Spring embedded WebApplicationContext
+11:36:26.971 [] [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3392 ms
+11:36:27.666 [] [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+11:36:27.771 [] [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.32.Final
+11:36:28.080 [] [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+11:36:28.263 [] [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+11:36:29.303 [] [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+11:36:29.367 [] [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+11:36:31.043 [] [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+11:36:31.056 [] [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+11:36:32.021 [] [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+11:36:33.345 [] [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+11:36:33.363 [] [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+11:36:33.439 [] [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+11:36:33.489 [] [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path '/data'
+11:36:33.518 [] [restartedMain] INFO  com.revature.MatchifyApplication - Started MatchifyApplication in 10.789 seconds (JVM running for 12.852)
+11:39:02.539 [] [RMI TCP Connection(11)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+11:39:02.583 [] [RMI TCP Connection(11)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+11:39:02.588 [] [RMI TCP Connection(11)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+11:39:02.603 [] [RMI TCP Connection(11)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+21:39:04.710 [] [restartedMain] INFO  com.revature.MatchifyApplication - Starting MatchifyApplication using Java 15 on Blake-PC with PID 13116 (C:\Users\Me\Desktop\Project2-Amplifire-Azura\target\classes started by Me in C:\Users\Me\Desktop\Project2-Amplifire-Azura)
+21:39:04.714 [] [restartedMain] INFO  com.revature.MatchifyApplication - No active profile set, falling back to default profiles: default
+21:39:04.786 [] [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+21:39:04.786 [] [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+21:39:06.088 [] [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+21:39:06.182 [] [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 83 ms. Found 2 JPA repository interfaces.
+21:39:07.197 [] [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+21:39:07.210 [] [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+21:39:07.211 [] [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+21:39:07.211 [] [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
+21:39:07.365 [] [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/data] - Initializing Spring embedded WebApplicationContext
+21:39:07.366 [] [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2578 ms
+21:39:07.824 [] [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+21:39:07.890 [] [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.32.Final
+21:39:08.068 [] [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+21:39:08.222 [] [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+21:39:09.304 [] [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+21:39:09.351 [] [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+21:39:10.878 [] [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+21:39:10.899 [] [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+21:39:11.614 [] [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+21:39:12.604 [] [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+21:39:12.615 [] [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+21:39:12.667 [] [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+21:39:12.696 [] [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path '/data'
+21:39:12.716 [] [restartedMain] INFO  com.revature.MatchifyApplication - Started MatchifyApplication in 8.553 seconds (JVM running for 10.0)
+21:43:50.575 [] [http-nio-8081-exec-1] INFO  o.a.c.c.C.[.[localhost].[/data] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+21:43:50.575 [] [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+21:43:50.577 [] [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+21:43:50.641 [] [http-nio-8081-exec-2] WARN  com.revature.aspects.Logging - com.revature.services.FavoritesService@649f0a67 invoked List com.revature.services.FavoritesService.findAll() with param [Ljava.lang.Object;@4bc015a5
+21:43:50.642 [] [http-nio-8081-exec-1] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@3680b598 invoked List com.revature.services.UsersServices.findAll() with param [Ljava.lang.Object;@5bc9d91
+21:43:51.144 [] [http-nio-8081-exec-3] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@3680b598 invoked List com.revature.services.UsersServices.findAll() with param [Ljava.lang.Object;@411241c6
+21:44:20.873 [] [http-nio-8081-exec-5] WARN  com.revature.aspects.Logging - com.revature.services.FavoritesService@649f0a67 invoked void com.revature.services.FavoritesService.addOrUpdateFavorites(Favorites) with param [Ljava.lang.Object;@75548c50
+21:44:25.611 [] [http-nio-8081-exec-6] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@3680b598 invoked List com.revature.services.UsersServices.findAll() with param [Ljava.lang.Object;@75d933e5
+21:44:25.697 [] [http-nio-8081-exec-7] WARN  com.revature.aspects.Logging - com.revature.services.FavoritesService@649f0a67 invoked List com.revature.services.FavoritesService.findAll() with param [Ljava.lang.Object;@780dff79
+21:44:25.874 [] [http-nio-8081-exec-8] WARN  com.revature.aspects.Logging - com.revature.services.UsersServices@3680b598 invoked List com.revature.services.UsersServices.findAll() with param [Ljava.lang.Object;@3a797db5
+21:44:37.750 [] [http-nio-8081-exec-10] WARN  com.revature.aspects.Logging - com.revature.services.FavoritesService@649f0a67 invoked void com.revature.services.FavoritesService.deleteFavorites(int) with param [Ljava.lang.Object;@299c814f
+22:35:53.858 [] [RMI TCP Connection(62)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+22:35:53.893 [] [RMI TCP Connection(62)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+22:35:53.897 [] [RMI TCP Connection(62)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+22:35:53.901 [] [RMI TCP Connection(62)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
