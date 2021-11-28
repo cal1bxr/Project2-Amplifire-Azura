@@ -22,7 +22,7 @@ More information about songs and artists displayed from the API
 ## Setting up the application:
 
 **Clone the repository somewhere onto your computer with git**  
-![](./imgs/cloning.JPG)
+![](./imgs/cloning.png)
 
 **Import an existing Maven project into your IDE**  
 ![](./imgs/importing.JPG)
@@ -30,14 +30,15 @@ More information about songs and artists displayed from the API
 **Select the folder into which you cloned the repository**  
 ![](./imgs/selecting.JPG)
 
-**Run the first line of the PostgreSQL script in a database instance**  
-![](./imgs/create.png)
-
-**Run the Main class as a java application**  
+**Run the Main class as a Spring Boot application**  
 ![](./imgs/running.png)
 
-**Run the rest of the PostgreSQL script**  
-![](./imgs/database.png)
+**Navigate to <the file you cloned into/Angular/matchify> and open a terminal. Then, run the command "ng serve -o"**  
+![](./imgs/frontend.png)
 
-**Head to a browser and navigate to http://localhost:8081/proj1.html**  
-![](./imgs/navigating.png)
+## Usage
+
+To use any features, login with Spotify! You can then navigate throughout the application using the nav bar at the top or the links on the home page. Thanks for checking out our project!  
+**Samples:**  
+![](./imgs/usage.png)
+![](./imgs/usage1.png)
